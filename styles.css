@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family:sans-serif;
+}
+:root{
+    --color--green-primary: #60ff00;
+    --color--green-secundary: #44B200;
+    --color--green-terciary: #8FFF4C;
+    --color--black-primary: #000000;
+    --color--black-secundary: #1A1A1A;
+    --color--white-primary: #FFFFFF;
+    --color--white-secundary: #E5E5E5;
+}
