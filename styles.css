@@ -122,3 +122,66 @@ html{
     color: var(--color--negro-primario);
     background-color: var(--color--verde-terciario);
 }
+
+/* Horario */
+
+@font-face {
+    font-family: "FormatHR";
+    src: url("/assets/fonts/NeuePlak-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "white-letter";
+    src: url("/assets/fonts/SCHABO-Condensed.otf") format("truetype");
+  }
+
+.acb-hor{
+    background-image: url('/assets/schedules/schedulesbackg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: auto;
+    height: auto;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 10rem;
+}
+
+.lv-am {
+    height: 500px;
+    width: 300px;
+    border: #000000 solid 10px;
+}
+
+
+.dias {
+    position: relative;
+    font-family: white-letter;
+    font-size: 5rem;
+    top: -69px;
+    left: -67px;
+    height: 60px;
+    background-color: white;
+    display: inline-block;
+}
+
+.am {
+    position: relative;
+    font-size: 6rem;
+    font-family: white-letter;
+    display: inline-block;
+    color: var(--color--verde-primario);
+    left: 112px;
+    top: -208px;
+    height: 60px;
+    padding: 0 15px;
+    background-color: #000000;
+    transform: rotate(-90deg);
+}
