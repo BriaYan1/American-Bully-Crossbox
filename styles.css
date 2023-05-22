@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family:sans-serif;
+}
+
+@font-face {
+    font-family: "NeuePlak-Regular";
+    src: url("/assets/fonts/NeuePlakText-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "NeuePlak-Bold";
+    src: url("/assets/fonts/NeuePlak-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "normal";
+    src: url("/assets/fonts/SCHABO-Condensed.otf") format("truetype");
+}
+
+:root{
+    --color--verde-primario: #60ff00;
+    --color--verde-secundario: #44B200;
+    --color--verde-terciario: #8FFF4C;
+    --color--negro-primario: #000000;
+    --color--negro-secundario: #1A1A1A;
+    --color--blanco-primario: #FFFFFF;
+    --color--blanco-secundario: #E5E5E5;
+}
+
+/*Estilizando la barra de navegacion*/
+.nav--container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background-color: var(--color--negro-primario);
+}
+.nav--left{
+    display: flex;
+}
+.nav--logo{
+    width: 100px;
+    height: 100px;
+    padding: 10px 10px;
+}
+.nav--logo img{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+.nav--elements ul{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.nav--elements li{
+    font-family: "NeuePlak-Regular";
+    font-size: 2rem;
+    padding-left: 20px;
+    padding-top: 35px;
+    color: var(--color--blanco-primario);
+    cursor: pointer;
+}
+
+.nav--elements li:hover{
+    font-family: "NeuePlak-Regular";
+    font-size: 2.5rem;
+    color: var(--color--verde-primario)
+}
+
+.nav--right{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-left: 100px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: -40px;
+}
+.contact{
+    padding-right: 2rem;
+}
+
+.btn-1{
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    color: var(--color--blanco-primario);
+    background-color: var(--color--negro-primario);
+    padding-right: 2rem;
+    cursor: pointer;
+}
+
+.btn-1:hover{
+    color: var(--color--verde-primario);
+}
+
+.btn-2{
+    color: var(--color--negro-primario);
+    background-color: var(--color--verde-primario);
+    height: 50px;
+    width: 100px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-2:hover{
+    color: var(--color--negro-primario);
+    background-color: var(--color--verde-terciario);
+}
+
+/* Horario */
+
+@font-face {
+    font-family: "FormatHR";
+    src: url("/assets/fonts/NeuePlak-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "white-letter";
+    src: url("/assets/fonts/SCHABO-Condensed.otf") format("truetype");
+  }
+
+.acb-hor{
+    background-image: url('/assets/schedules/schedulesbackg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: auto;
+    height: auto;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 10rem;
+}
+
+.lv-am {
+    height: 500px;
+    width: 300px;
+    border: #000000 solid 10px;
+}
+
+
+.dias {
+    position: relative;
+    font-family: white-letter;
+    font-size: 5rem;
+    top: -69px;
+    left: -67px;
+    height: 60px;
+    background-color: white;
+    display: inline-block;
+}
+
+.am {
+    position: relative;
+    font-size: 6rem;
+    font-family: white-letter;
+    display: inline-block;
+    color: var(--color--verde-primario);
+    left: 112px;
+    top: -208px;
+    height: 60px;
+    padding: 0 15px;
+    background-color: #000000;
+    transform: rotate(-90deg);
+}
