@@ -7,15 +7,32 @@ html{
     font-size: 62.5%;
     font-family:sans-serif;
 }
-:root{
-    --color--green-primary: #60ff00;
-    --color--green-secundary: #44B200;
-    --color--green-terciary: #8FFF4C;
-    --color--black-primary: #000000;
-    --color--black-secundary: #1A1A1A;
-    --color--white-primary: #FFFFFF;
-    --color--white-secundary: #E5E5E5;
+
+@font-face {
+    font-family: "NeuePlak-Regular";
+    src: url("/assets/fonts/NeuePlakText-Regular.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "NeuePlak-Bold";
+    src: url("/assets/fonts/NeuePlak-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "normal";
+    src: url("/assets/fonts/SCHABO-Condensed.otf") format("truetype");
+}
+
+:root{
+    --color--verde-primario: #60ff00;
+    --color--verde-secundario: #44B200;
+    --color--verde-terciario: #8FFF4C;
+    --color--negro-primario: #000000;
+    --color--negro-secundario: #1A1A1A;
+    --color--blanco-primario: #FFFFFF;
+    --color--blanco-secundario: #E5E5E5;
+}
+
 /*Estilizando la barra de navegacion*/
 .nav--container{
     display: flex;
@@ -23,7 +40,7 @@ html{
     width: 100%;
     height: 100px;
     position: fixed;
-    background-color: var(--color--black-primary);
+    background-color: var(--color--negro-primario);
 }
 .nav--left{
     display: flex;
@@ -46,42 +63,62 @@ html{
     justify-content: center;
     align-items: center;
 }
-.nav--elements ul > li{
-    font-size: 2.5rem;
+.nav--elements li{
+    font-family: "NeuePlak-Regular";
+    font-size: 2rem;
     padding-left: 20px;
     padding-top: 35px;
-    color: var(--color--white-primary);
+    color: var(--color--blanco-primario);
+    cursor: pointer;
 }
+
+.nav--elements li:hover{
+    font-family: "NeuePlak-Regular";
+    font-size: 2.5rem;
+    color: var(--color--verde-primario)
+}
+
 .nav--right{
     display: flex;
     width: 100%;
     height: auto;
     padding-left: 100px;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 580px;
+    justify-content: flex-end;
     padding-top: -40px;
 }
 .contact{
-    padding-right: 30px;
+    padding-right: 2rem;
 }
+
 .btn-1{
-    height: 50px;
-    width: 100px;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: bold;
     border: none;
     border-radius: 10px;
-    color: var(--color--white-primary);
-    background-color: var(--color--black-primary);
+    color: var(--color--blanco-primario);
+    background-color: var(--color--negro-primario);
+    padding-right: 2rem;
+    cursor: pointer;
 }
+
+.btn-1:hover{
+    color: var(--color--verde-primario);
+}
+
 .btn-2{
-    color: var(--color--black-primary);
-    background-color: var(--color--green-primary);
+    color: var(--color--negro-primario);
+    background-color: var(--color--verde-primario);
     height: 50px;
     width: 100px;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: bold;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-2:hover{
+    color: var(--color--negro-primario);
+    background-color: var(--color--verde-terciario);
 }
