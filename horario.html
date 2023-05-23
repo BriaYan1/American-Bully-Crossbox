@@ -1,54 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>American Cross Bully | Horario</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="/assets/logo/logotype.png" type="icono" />
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="hr-container">
-    <!--Maquetacion del Header / Barra de Navegacion-->
+  <body class="hr-container">
+    <!--Maquetacion del Header /asd Barra de Navegacion-->
     <header>
-        <nav class="nav--container">
-            <div class="nav--left">
-                <div class="nav--logo">
-                    <img src="assets/logo/logotype.png" alt="logo" class="logo-img">
-                </div>
-                <div class="nav--elements">
-                    <ul>
-                        <li><a href="index.html"> INICIO </a></li>
-                        <li><a href="./horario.html"> CROSSFIT</a></li>
-                        <li><a href="./horario.html"> COACHES</a></li>
-                        <li><a href="#"> COMPETENCIAS</a></li>
-                        <li><a href="#">HORARIOS</a></li>
-                        <li><a href="#">PLANES</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="nav--right">
-                <div class="contact"><button class="btn-1">Contacto</button></div>
-                <div class="contact"><button class="btn-2">Login</button></div>
-            </div>
-        </nav>
+      <nav class="nav--container">
+        <div class="nav--left">
+          <div class="nav--logo">
+            <img src="assets/logo/logotype.png" alt="logo" class="logo-img" />
+          </div>
+          <div class="nav--elements">
+            <ul>
+              <li>INICIO</li>
+              <li>CROSSFIT</li>
+              <li>COACHES</li>
+              <li>COMPETENCIAS</li>
+              <li>HORARIOS</li>
+              <li>PLANES</li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav--right">
+          <div class="contact"><button class="btn-1">Contacto</button></div>
+          <div class="contact"><button class="btn-2">Login</button></div>
+        </div>
+      </nav>
     </header>
 
-    <section class="hr-listcont">
-      <article class="hr-lista">
-        <div class="hr-am hr-aa">AM</div>
-        <div class="lista"></div>
-        <div class="hr-am">PM</div>
-        <div class="lista"></div>
-        <div class="hr-am-pm hr-li">AM-PM</div>
-        <div class="lista"></div>
-        <div class="hr-openbox">OPEN BOX</div>
-        <div class="lista"></div>
-      </article>
-    </section>
-    
-</body>
+    <!--Maquetacion Horario-->
 
+    <main class="horario">
+      <div class="hr-titulo">HORARIOS</div>
+      <section class="hr-listcont">
+        <article class="hr-lista">
+          <div class="hr-dias">Lunes a Viernes</div>
+          <div class="hr-am hr-aa">AM</div>
+          <div class="lista ls-am">
+            <p>6:00 - 7:00</p>
+            <p>7:00 - 8:00</p>
+            <p>8:00 - 9:00</p>
+            <p>9:00 - 10:00</p>
+            <p>10:00 - 11:00</p>
+            <p>11:00 - 12:00</p>
+          </div>
+          <div class="hr-am">PM</div>
+          <div class="lista ls-am">
+            <p>2:00 - 3:00</p>
+            <p>3:00 - 4:00</p>
+            <p>4:00 - 5:00</p>
+            <p>5:00 - 6:00</p>
+            <p>6:00 - 7:00</p>
+            <p>7:00 - 8:00</p>
+            <p>8:00 - 9:00</p>
+          </div>
+          <div class="hr-find">Sabados</div>
+          <div class="hr-am-pm hr-ab">AM-PM</div>
+          <div class="lista ls-am">
+            <p>9:00 - 10:00</p>
+            <p>10:00 - 11:00</p>
+            <p>11:00 - 12:00</p>
+            <p>12:00 - 1:00</p>
+          </div>
+          <div class="hr-open">Lunes a Viernes</div>
+          <div class="hr-openbox">OPEN BOX</div>
+          <div class="lista ls-am">
+            <p>12:00 - 1:00</p>
+            <p>1:00 - 2:00</p>
+            <p>2:00 - 3:00</p>
+            <p>3:00 - 4:00</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
