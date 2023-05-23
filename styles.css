@@ -149,9 +149,9 @@ html{
 }
 
 .hr-lista {
-    background-color: #E5E5E5;
+    /* background-color: #E5E5E5; */
     display: flex;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-top: 150px;
     justify-content: center;
 }
@@ -194,7 +194,7 @@ html{
     color: white;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 27px;
     font-family: NeuePlak-Bold;
     padding: 0 3px 4px 0;
     transform: rotate(-90deg);
@@ -215,6 +215,6 @@ html{
     font-family: NeuePlak-Bold;
     padding: 0 3px 4px 0;
     transform: rotate(-90deg);
-    left: 42px;
-    top: 55px;
+    left: 56px;
+    top: 56px;
 }
