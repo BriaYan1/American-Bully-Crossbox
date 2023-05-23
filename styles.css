@@ -1,3 +1,6 @@
+/* font-family: 'Bebas Neue', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
 *{
     padding: 0;
     margin: 0;
@@ -8,20 +11,6 @@ html{
     font-family:sans-serif;
 }
 
-@font-face {
-    font-family: "NeuePlak-Regular";
-    src: url("/assets/fonts/NeuePlakText-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "NeuePlak-Bold";
-    src: url("/assets/fonts/NeuePlak-Bold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "normal";
-    src: url("/assets/fonts/SCHABO-Condensed.otf") format("truetype");
-}
 
 :root{
     --color--verde-primario: #60ff00;
@@ -34,6 +23,10 @@ html{
 }
 
 /*Estilizando la barra de navegacion*/
+a {
+    text-decoration: none;
+}
+
 .nav--container{
     display: flex;
     justify-content: space-between;
@@ -44,69 +37,65 @@ html{
 }
 .nav--left{
     display: flex;
+    align-items: center;
 }
 .nav--logo{
-    width: 100px;
-    height: 100px;
-    padding: 10px 10px;
+    padding-left: 1.5rem;
+    padding-right: 3rem;
 }
 .nav--logo img{
-    width: 54px;
-    height: 54px;
-    margin: -3px auto auto 10px;
+    width: 5rem;
+    height: 5rem;
 }
 .nav--elements ul{
     display: flex;
     width: 100%;
     margin: 0 auto;
     list-style: none;
-    justify-content: center;
     align-items: center;
+    gap: 2rem; /* Agrega espacio entre elementos */
+}
+
+.nav--elements a {
+    color: var(--color--blanco-primario);
+}
+
+.nav--elements a:hover{
+    font-size: 1.7rem;
+    color: var(--color--verde-primario)
 }
 
 .nav--elements li{
-    font-family: "NeuePlak-Regular";
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     font-size: 1.6rem;
-    padding-left: 20px;
-    padding-top: 21.2px;
     color: var(--color--blanco-primario);
     cursor: pointer;
-}
-
-.nav--elements ul li:first-child {
-    margin-left: -20px;
-}
-
-.nav--elements li:hover{
-    font-family: "NeuePlak-Regular";
-    padding-left: 20px;
-    padding-top: 19px;
-    font-size: 1.7rem;
-    color: var(--color--verde-primario)
+    align-items: center;
+    justify-content: center;
 }
 
 .nav--right{
     display: flex;
     width: 100%;
     height: auto;
-   /*  padding-left: 100px; */
     align-items: center;
     justify-content: flex-end;
-   /*  padding-top: -40px; */
 }
 .contact{
     padding-right: 2rem;
 }
 
 .btn-1{
+    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 600;
     border: none;
-    border-radius: 10px;
+    border-radius: 1rem;
     color: var(--color--blanco-primario);
     background-color: var(--color--negro-primario);
-    padding-right: 2rem;
     cursor: pointer;
+    padding-left: 3rem;
 }
 
 .btn-1:hover{
@@ -114,12 +103,13 @@ html{
 }
 
 .btn-2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     color: var(--color--negro-primario);
     background-color: var(--color--verde-primario);
     height: 40px;
     width: 100px;
     font-size: 1.4rem;
-    font-weight: bold;
     border: none;
     border-radius: 10px;
     cursor: pointer;
