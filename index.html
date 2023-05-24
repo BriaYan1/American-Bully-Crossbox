@@ -8,10 +8,10 @@
     <title>American Cross Bully</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/assets/logo/logotype.png" type="icono" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5a8265bcfc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -22,7 +22,8 @@
                 <div class="nav--logo">
                     <img src="assets/logo/logotype.png" alt="logo" class="logo-img">
                 </div>
-                <div class="nav--elements">
+                <div class="nav--elements" id="nav">
+                    <button class="button--cerrar" id="cerrar"><i class="fa-solid fa-xmark"></i></button>
                     <ul>
                         <li><a href="index.html"> INICIO </a></li>
                         <li><a href="./horario.html"> CROSSFIT</a></li>
@@ -30,9 +31,12 @@
                         <li><a href="#"> COMPETENCIAS</a></li>
                         <li><a href="#">HORARIOS</a></li>
                         <li><a href="#">PLANES</a></li>
+                        <div class="contact"><button class="btn-1">Contacto</button></div>
+                        <div class="contact"><button class="btn-2">Login</button></div>
                     </ul>
                 </div>
             </div>
+            <button class="button--abrir" id="abrir"><i class="fa-solid fa-bars"></i></button>
             <div class="nav--right">
                 <div class="contact"><button class="btn-1">Contacto</button></div>
                 <div class="contact"><button class="btn-2">Login</button></div>
@@ -46,6 +50,6 @@
         </section>
     </main>
 
-
+    <script src="main.js"></script>
 </body>
 </html>

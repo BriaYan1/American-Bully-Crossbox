@@ -10,8 +10,6 @@ html{
     font-size: 62.5%;
     font-family:sans-serif;
 }
-
-
 :root{
     --color--verde-primario: #60ff00;
     --color--verde-secundario: #44B200;
@@ -26,7 +24,6 @@ html{
 a {
     text-decoration: none;
 }
-
 .nav--container{
     display: flex;
     justify-content: space-between;
@@ -55,16 +52,13 @@ a {
     align-items: center;
     gap: 2rem; /* Agrega espacio entre elementos */
 }
-
 .nav--elements a {
     color: var(--color--blanco-primario);
 }
-
 .nav--elements a:hover{
     font-size: 1.7rem;
     color: var(--color--verde-primario)
 }
-
 .nav--elements li{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -74,7 +68,6 @@ a {
     align-items: center;
     justify-content: center;
 }
-
 .nav--right{
     display: flex;
     width: 100%;
@@ -85,7 +78,6 @@ a {
 .contact{
     padding-right: 2rem;
 }
-
 .btn-1{
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
@@ -97,11 +89,9 @@ a {
     cursor: pointer;
     padding-left: 3rem;
 }
-
 .btn-1:hover{
     color: var(--color--verde-primario);
 }
-
 .btn-2{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -114,10 +104,73 @@ a {
     border-radius: 10px;
     cursor: pointer;
 }
-
 .btn-2:hover{
     color: var(--color--negro-primario);
     background-color: var(--color--verde-terciario);
+}
+
+/*Estilizando Menu Hamburguesa*/
+.button--abrir{
+    display: none;
+    border: 0;
+    font-size: 2rem;
+    color: var(--color--blanco-secundario);
+    background-color: var(--color--negro-primario);
+    cursor: pointer;
+}
+.button--cerrar{
+    display: none;
+    display: none;
+    border: 0;
+    font-size: 2rem;
+    color: var(--color--blanco-secundario);
+    background-color: var(--color--negro-primario);
+    cursor: pointer;
+}
+@media (max-width: 940px) {
+    .button--abrir{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        justify-content: center;
+    }
+    .button--cerrar{
+        display: block;
+    }
+    .nav--elements{
+        display: none;
+    }
+    .nav--right{
+        display: none;
+    }
+    .nav--elements{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--color--negro-primario);
+        bottom: 0;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 2rem;
+        opacity: 0; /*No deja ver la barra*/
+        visibility: hidden; /*No deja ver la barra*/
+    }
+    .visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav--elements ul{
+        flex-direction: column;
+        align-items: end;
+    }
+    
 }
 
 /* HORARIO -- By LuisLR */
