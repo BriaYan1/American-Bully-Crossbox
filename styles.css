@@ -141,6 +141,11 @@ a {
         text-align: center;
         justify-content: center;
         padding-top: 2rem;
+        outline: none;
+    }
+    .button--abrir:hover{
+        color: var(--color--blanco-primario);
+        transition: all 0.3s;
     }
     .button--cerrar{
         display: flex;
@@ -149,6 +154,11 @@ a {
         height: 5rem;
         text-align: center;
         justify-content: flex-end;
+        outline: none;
+    }
+    .button--cerrar:hover{
+        color: var(--color--blanco-primario);
+        transition: all 0.3s;
     }
     .nav--elements{
         display: none;
