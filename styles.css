@@ -44,6 +44,9 @@ a {
     width: 5rem;
     height: 5rem;
 }
+.aux{
+    display: none;
+}
 .nav--elements ul{
     display: flex;
     width: 100%;
@@ -99,7 +102,7 @@ a {
 }
 .btn-2{
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: bold;
     color: var(--color--negro-primario);
     background-color: var(--color--verde-primario);
     height: 40px;
@@ -143,6 +146,23 @@ a {
     .button--abrir:hover{
         color: var(--color--blanco-primario);
         transition: all 0.3s;
+    }
+    .aux{
+        display: block;
+    }
+    .btn-1{
+        padding-left: 0;
+        font-weight: bold;
+        padding-top: 13rem;
+    }
+    .btn-1:hover{
+        color: var(--color--verde-primario);
+        transition: all 0.4s;
+    }
+    .btn-2:hover{
+        color: var(--color--negro-primario);
+        background-color: var(--color--verde-terciario);
+        transition: all 0.4s;
     }
     .button--cerrar{
         display: flex;
