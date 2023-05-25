@@ -44,6 +44,7 @@ a {
     width: 5rem;
     height: 5rem;
 }
+
 .nav--elements ul{
     display: flex;
     width: 100%;
@@ -68,6 +69,7 @@ a {
     align-items: center;
     justify-content: center;
 }
+
 .nav--right{
     display: flex;
     width: 100%;
@@ -120,7 +122,6 @@ a {
 }
 .button--cerrar{
     display: none;
-    display: none;
     border: 0;
     font-size: 2rem;
     color: var(--color--blanco-secundario);
@@ -130,16 +131,20 @@ a {
 @media (max-width: 940px) {
     .button--abrir{
         display: flex;
-        flex-direction: column;
-        padding: 2rem;
         align-items: center;
         width: 5rem;
         height: 5rem;
         text-align: center;
         justify-content: center;
+        padding-top: 2rem;
     }
     .button--cerrar{
-        display: block;
+        display: flex;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        justify-content: flex-end;
     }
     .nav--elements{
         display: none;
@@ -148,6 +153,8 @@ a {
         display: none;
     }
     .nav--elements{
+        display: flex;
+        width: 23rem;
         position: absolute;
         top: 0;
         right: 0;
@@ -155,12 +162,18 @@ a {
         bottom: 0;
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
-        display: flex;
         flex-direction: column;
         align-items: end;
-        gap: 2rem;
+        gap: 5rem;
         opacity: 0; /*No deja ver la barra*/
         visibility: hidden; /*No deja ver la barra*/
+    }
+    .nav--elements li i{
+        display: flex;
+        padding-right: 1rem;
+    }
+    .nav--elements li span{
+        padding-left: 1rem;
     }
     .visible{
         opacity: 1;
@@ -168,157 +181,8 @@ a {
     }
     .nav--elements ul{
         flex-direction: column;
-        align-items: end;
+        gap: 3rem;
+        align-items: normal; /*Alinea los li a la derecha*/
     }
     
-}
-
-/* HORARIO -- By LuisLR */
-
-.hr-container {
-    background-image: url('/assets/schedules/schedulesbackg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-    height: auto;
-}
-
-.hr-listcont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.hr-titulo {
-    position: relative;
-    font-family: normal;
-    font-weight: 100;
-    text-align: center;
-    top: 90px;
-    letter-spacing: 6px;
-    font-size: 70px;
-}
-
-.hr-lista {
-    /* background-color: #E5E5E5; */
-    display: flex;
-    /* border: 1px solid black; */
-    margin-top: 150px;
-    justify-content: center;
-}
-
-.lista {
-    border: 3px solid black;
-    background-color: #3a93022e;
-    width: 210px;
-    height: 340px;
-    margin: 5px;
-}
-
-.hr-aa {
-    margin-left: -247px;
-}
-
-.hr-dias {
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    display: inline;
-    background-color: white;
-    font-size: 21px;
-    text-align: center;
-    width: 200px;
-    height: 33px;
-    left: -12px;
-    top: -28px;
-}
-
-.hr-find {
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    display: inline;
-    background-color: white;
-    font-size: 21px;
-    text-align: center;
-    width: 200px;
-    height: 33px;
-    left: 35px;
-    top: -28px;
-}
-.hr-open {
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    display: inline;
-    background-color: white;
-    font-size: 21px;
-    text-align: center;
-    width: 200px;
-    height: 33px;
-    left: 35px;
-    top: -28px;
-}
-
-.hr-am {
-    display: flex;
-    background-color: #000000;
-    height: 40px;
-    position: relative;
-    width: 70px;
-    color: var(--color--verde-primario);
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-family: NeuePlak-Bold;
-    padding: 0 3px 4px 0;
-    transform: rotate(-90deg);
-    left: 20px;
-    top: 20px;
-}
-
-.hr-am-pm {
-    display: flex;
-    background-color: #000000;
-    height: 40px;
-    position: relative;
-    width: 110px;
-    color: var(--color--verde-primario);
-    align-items: center;
-    justify-content: center;
-    font-size: 27px;
-    font-family: NeuePlak-Bold;
-    padding: 0 3px 4px 0;
-    transform: rotate(-90deg);
-    margin-left: -240px;
-    left: 40px;
-    top: 40px;
-}
-
-.hr-openbox {
-    display: flex;
-    background-color: #000000;
-    height: 40px;
-    position: relative;
-    width: 141px;
-    color: var(--color--verde-primario);
-    align-items: center;
-    justify-content: center;
-    margin-left: -270px;
-    font-size: 25px;
-    font-family: NeuePlak-Bold;
-    padding: 0 3px 4px 0;
-    transform: rotate(-90deg);
-    left: 56px;
-    top: 56px;
-}
-
-.ls-am {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-size: 25px;
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
 }
