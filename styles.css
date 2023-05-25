@@ -141,7 +141,6 @@ a {
         text-align: center;
         justify-content: center;
         padding-top: 2rem;
-        outline: none;
     }
     .button--abrir:hover{
         color: var(--color--blanco-primario);
@@ -154,7 +153,7 @@ a {
         height: 5rem;
         text-align: center;
         justify-content: flex-end;
-        outline: none;
+        padding-bottom: 1rem;
     }
     .button--cerrar:hover{
         color: var(--color--blanco-primario);
@@ -174,11 +173,12 @@ a {
         right: 0;
         background-color: var(--color--negro-primario);
         bottom: 0;
-        padding: 2rem;
+        padding: 2rem 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
         flex-direction: column;
         align-items: end;
         gap: 5rem;
+        outline: none;
         opacity: 0; /*No deja ver la barra*/
         visibility: hidden; /*No deja ver la barra*/
     }
