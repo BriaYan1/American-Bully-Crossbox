@@ -136,11 +136,9 @@ a {
     .button--abrir{
         display: flex;
         align-items: center;
-        width: 5rem;
-        height: 5rem;
         text-align: center;
         justify-content: center;
-        padding-top: 2rem;
+        padding-right: 2rem;
     }
     .button--abrir:hover{
         color: var(--color--blanco-primario);
@@ -149,11 +147,8 @@ a {
     .button--cerrar{
         display: flex;
         align-items: center;
-        width: 5rem;
-        height: 5rem;
         text-align: center;
         justify-content: flex-end;
-        padding-bottom: 1rem;
     }
     .button--cerrar:hover{
         color: var(--color--blanco-primario);
