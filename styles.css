@@ -44,7 +44,6 @@ a {
     width: 5rem;
     height: 5rem;
 }
-
 .nav--elements ul{
     display: flex;
     width: 100%;
@@ -53,12 +52,16 @@ a {
     align-items: center;
     gap: 2rem; /* Agrega espacio entre elementos */
 }
+.nav--elements ul i{
+    display: none;
+}
 .nav--elements a {
     color: var(--color--blanco-primario);
 }
 .nav--elements a:hover{
     font-size: 1.7rem;
-    color: var(--color--verde-primario)
+    color: var(--color--verde-primario);
+    transition: all 0.4s;
 }
 .nav--elements li{
     font-family: 'Poppins', sans-serif;
@@ -69,7 +72,6 @@ a {
     align-items: center;
     justify-content: center;
 }
-
 .nav--right{
     display: flex;
     width: 100%;
@@ -82,7 +84,7 @@ a {
 }
 .btn-1{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     border: none;
     border-radius: 1rem;
@@ -93,6 +95,7 @@ a {
 }
 .btn-1:hover{
     color: var(--color--verde-primario);
+    transition: all 0.4s;
 }
 .btn-2{
     font-family: 'Poppins', sans-serif;
@@ -101,7 +104,7 @@ a {
     background-color: var(--color--verde-primario);
     height: 40px;
     width: 100px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -109,6 +112,7 @@ a {
 .btn-2:hover{
     color: var(--color--negro-primario);
     background-color: var(--color--verde-terciario);
+    transition: all 0.4s;
 }
 
 /*Estilizando Menu Hamburguesa*/
@@ -128,7 +132,7 @@ a {
     background-color: var(--color--negro-primario);
     cursor: pointer;
 }
-@media (max-width: 940px) {
+@media (max-width: 1050px) {
     .button--abrir{
         display: flex;
         align-items: center;
@@ -171,18 +175,21 @@ a {
     .nav--elements li i{
         display: flex;
         padding-right: 1rem;
+        padding-top: 0.4rem;
     }
     .nav--elements li span{
         padding-left: 1rem;
     }
-    .visible{
-        opacity: 1;
-        visibility: visible;
+    .nav--elements a{
+        display: flex;
     }
     .nav--elements ul{
         flex-direction: column;
         gap: 3rem;
         align-items: normal; /*Alinea los li a la derecha*/
     }
-    
+    .visible{
+        opacity: 1;
+        visibility: visible;
+    }
 }
