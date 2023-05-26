@@ -25,6 +25,7 @@ a {
     text-decoration: none;
 }
 .nav--container{
+    position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -218,3 +219,32 @@ a {
         visibility: visible;
     }
 }
+/*Estilizando Portada*/
+.container--portada{
+    background-image: url(assets/home/homebackg.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 105vh;
+}
+.titulos--portada{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: var(--color--blanco-primario);
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    padding: 7rem;
+}
+.container--titulos{
+    padding-top: 10rem;
+}
+.h1-2--portada span{
+    color: var(--color--verde-primario);
+}
+
