@@ -45,7 +45,7 @@ a {
     width: 5rem;
     height: 5rem;
 }
-.aux{
+.btn--contactologin{
     display: none;
 }
 .nav--elements ul{
@@ -118,7 +118,6 @@ a {
     background-color: var(--color--verde-terciario);
     transition: all 0.4s;
 }
-
 /*Estilizando Menu Hamburguesa*/
 .button--abrir{
     display: none;
@@ -148,13 +147,14 @@ a {
         color: var(--color--blanco-primario);
         transition: all 0.3s;
     }
-    .aux{
+    .btn--contactologin{
         display: block;
     }
     .btn-1{
         padding-left: 0;
         font-weight: bold;
-        padding-top: 13rem;
+        padding-top: 20rem;
+        background-color: transparent;
     }
     .btn-1:hover{
         color: var(--color--verde-primario);
@@ -175,9 +175,6 @@ a {
         color: var(--color--blanco-primario);
         transition: all 0.3s;
     }
-    .nav--elements{
-        display: none;
-    }
     .nav--right{
         display: none;
     }
@@ -190,11 +187,10 @@ a {
         background-color: var(--color--negro-primario);
         bottom: 0;
         padding: 2rem 2rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.9);
         flex-direction: column;
         align-items: end;
         gap: 5rem;
-        outline: none;
         opacity: 0; /*No deja ver la barra*/
         visibility: hidden; /*No deja ver la barra*/
     }
@@ -205,6 +201,7 @@ a {
     }
     .nav--elements li span{
         padding-left: 1rem;
+        padding-top: 0.4rem;
     }
     .nav--elements a{
         display: flex;
@@ -219,7 +216,7 @@ a {
         visibility: visible;
     }
 }
-/*Estilizando Portada*/
+/*Estilizando Portada 740 px de alto queda bien la imagen*/
 .container--portada{
     background-image: url(assets/home/homebackg.jpg);
     background-position: fixed;
@@ -269,7 +266,7 @@ a {
         font-weight: bold;
         font-family: 'Bebas Neue', sans-serif;
         padding: 7rem;
-
+    }
 }    
 
 
