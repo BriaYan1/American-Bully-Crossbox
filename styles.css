@@ -35,6 +35,14 @@ a {
     /* position: fixed; */
     background-color: var(--color--negro-primario);
 }
+
+/* Ajustando vista movil */
+@media (max-width: 920px) {
+    body{
+        background-color: var(--color--verde-primario);
+    }
+}
+
 .nav--left{
     display: flex;
     align-items: center;
@@ -150,9 +158,7 @@ a {
 }
 
 .hr-lista {
-    /* background-color: #E5E5E5; */
     display: flex;
-    /* border: 1px solid black; */
     margin-top: 150px;
     justify-content: center;
 }
