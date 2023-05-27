@@ -308,15 +308,8 @@ a {
     .cross--main{
         display: flex;
     }
-    .cross--container {
-        display: flex;
-        width: 40rem;
-        height: 50rem;
-        padding: 4.1rem;
-    }
     .cross-titulo {
-        margin-top: 15rem;
-        font-size: 5rem;
+        text-align: center;
     }
     .cross-contenido {
         display: none;
