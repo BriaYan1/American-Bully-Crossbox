@@ -268,5 +268,67 @@ a {
         padding: 7rem;
     }
 }    
-
+/*Estilizando Que Es Crossfit */
+.cross--main {
+    background-image: url('/assets/schedules/schedulesbackg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    background-attachment: fixed;
+    min-height: 100vh;
+    height: auto;
+    justify-content: center;
+}
+.cross--container {
+    display: flex;
+    width: 133rem;
+    height: 58rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem;
+}
+.cross-titulo {
+    font-size: 6.5rem;
+    margin-bottom: 1.2rem;
+    padding-top: 25rem;
+    font-family: font-titulo;
+    text-transform: uppercase;
+    word-spacing: 1rem;
+     /* Enflaca  un Poco la letra del titulo */
+}
+.cross-contenido {
+    font-size: 2.3rem;
+    text-align: justify;
+    font-weight: 200;
+    font-family: font-texto;
+}
+.cross-contenido-resp {
+    display: none;
+}
+@media (max-width: 1050px){
+    .cross--main{
+        display: flex;
+    }
+    .cross--container {
+        display: flex;
+        width: 40rem;
+        height: 50rem;
+        padding: 4.1rem;
+    }
+    .cross-titulo {
+        margin-top: 15rem;
+        font-size: 5rem;
+    }
+    .cross-contenido {
+        display: none;
+    }
+    .cross-contenido-resp {
+        display: inline-block;
+        font-size: 1.45em;
+        text-align: justify;
+        font-weight: 200;
+        font-family: font-texto;
+    }
+}
 
