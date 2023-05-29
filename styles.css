@@ -1,5 +1,39 @@
-/* font-family: 'Bebas Neue', sans-serif;
-font-family: 'Poppins', sans-serif; */
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("/assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Italic";
+    src: url("/assets/fonts/Poppins/Poppins-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("/assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-BoldItalic";
+    src: url("/assets/fonts/Poppins/Poppins-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Black";
+    src: url("/assets/fonts/Poppins/Poppins-Black.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-BlackItalic";
+    src: url("/assets/fonts/Poppins/Poppins-BlackItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Schabo-Condensed";
+    src: url("/assets/fonts/SCHABO-Condensed.otf") format("truetype");
+}
+@font-face {
+    font-family: "Semakin";
+    src: url("/assets/fonts/Semakin.otf") format("truetype");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+  }
 
 *{
     padding: 0;
@@ -10,8 +44,6 @@ html{
     font-size: 62.5%;
     font-family:sans-serif;
 }
-
-
 :root{
     --color--verde-primario: #60ff00;
     --color--verde-secundario: #44B200;
@@ -22,27 +54,19 @@ html{
     --color--blanco-secundario: #E5E5E5;
 }
 
-/*Estilizando la barra de navegacion*/
+/*=======================| SECCION BARRA DE NAVEGACION |============================*/
 a {
     text-decoration: none;
 }
-
 .nav--container{
+    position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 69px;
+    height: 7rem;
     /* position: fixed; */
     background-color: var(--color--negro-primario);
 }
-
-/* Ajustando vista movil */
-@media (max-width: 920px) {
-    body{
-        background-color: var(--color--verde-primario);
-    }
-}
-
 .nav--left{
     display: flex;
     align-items: center;
@@ -55,6 +79,9 @@ a {
     width: 5rem;
     height: 5rem;
 }
+.btn--contactologin{
+    display: none;
+}
 .nav--elements ul{
     display: flex;
     width: 100%;
@@ -63,26 +90,26 @@ a {
     align-items: center;
     gap: 2rem; /* Agrega espacio entre elementos */
 }
-
+.nav--elements ul img{
+    display: none;
+}
 .nav--elements a {
     color: var(--color--blanco-primario);
 }
-
 .nav--elements a:hover{
     font-size: 1.7rem;
-    color: var(--color--verde-primario)
+    color: var(--color--verde-primario);
+    transition: all 0.4s;
 }
-
 .nav--elements li{
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 1.6rem;
     color: var(--color--blanco-primario);
     cursor: pointer;
     align-items: center;
     justify-content: center;
 }
-
 .nav--right{
     display: flex;
     width: 100%;
@@ -93,11 +120,10 @@ a {
 .contact{
     padding-right: 2rem;
 }
-
 .btn-1{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: bold;
     border: none;
     border-radius: 1rem;
     color: var(--color--blanco-primario);
@@ -105,174 +131,399 @@ a {
     cursor: pointer;
     padding-left: 3rem;
 }
-
 .btn-1:hover{
     color: var(--color--verde-primario);
+    transition: all 0.4s;
 }
-
 .btn-2{
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: bold;
     color: var(--color--negro-primario);
     background-color: var(--color--verde-primario);
-    height: 40px;
-    width: 100px;
-    font-size: 1.4rem;
+    height: 4rem;
+    width: 10rem;
+    font-size: 1.6rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 1rem;
     cursor: pointer;
 }
-
 .btn-2:hover{
     color: var(--color--negro-primario);
     background-color: var(--color--verde-terciario);
+    transition: all 0.4s;
 }
 
-/* HORARIO -- By LuisLR */
+/*=======================| MENU HAMBURGUESA |============================*/
+.button--abrir{
+    display: none;
+    border: 0;
+    font-size: 2rem;
+    color: var(--color--blanco-secundario);
+    background-color: var(--color--negro-primario);
+    cursor: pointer;
+}
+.button--cerrar{
+    display: none;
+    border: 0;
+    font-size: 2rem;
+    color: var(--color--blanco-secundario);
+    background-color: var(--color--negro-primario);
+    cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+    /* Estilizando la barra de navegación */
+    .button--abrir{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding-right: 2rem;
+    }
+    .button--abrir:hover{
+        color: var(--color--blanco-primario);
+        transition: all 0.3s;
+    }
+    .btn--contactologin{
+        display: block;
+    }
+    .btn-1{
+        font-weight: bold;
+        padding-top: 14rem;
+        background-color: transparent;
+        cursor: pointer;
+        padding-left: 1.5rem;
+    }
+    .btn-1:hover{
+        color: var(--color--verde-primario);
+        transition: all 0.4s;
+    }
+    .btn-2{
+        font-weight: bold;
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+    .btn-2:hover{
+        color: var(--color--negro-primario);
+        background-color: var(--color--verde-terciario);
+        transition: all 0.4s;
+    }
+    .button--cerrar{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: flex-end;
+    }
+    .button--cerrar:hover{
+        color: var(--color--blanco-primario);
+        transition: all 0.3s;
+    }
+    .nav--right{
+        display: none;
+    }
+    .nav--elements{
+        position: fixed;
+        display: flex;
+        width: 23rem;
+        top: 0;
+        right: 0;
+        background: var(--color--negro-primario);
+        bottom: 0;
+        padding: 2rem 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        align-items: end;
+        gap: 5rem;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .nav--elements li img{
+        display: flex;
+        padding-right: 1rem;
+        padding-top: 0.4rem;
+    }
+    .nav--elements li span{
+        padding-left: 1rem;
+        padding-top: 0.8rem;
+    }
+    .nav--elements a{
+        display: flex;
+    }
+    .nav--elements ul{
+        flex-direction: column;
+        gap: 3rem;
+        align-items: normal;
+    }
+    .visible{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/*=======================| SECCION PORTADA / 740 px de alto queda bien la imagen |============================*/
+.container--portada{
+    background-image: url(assets/home/homebackg.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.titulos--portada{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: var(--color--blanco-primario);
+    font-size: 4rem;
+    font-family: 'Semakin', sans-serif;
+    padding: 7rem;
+    letter-spacing: 0.2rem;
+    font-weight: bolder;
+}
+.container--titulos{
+    padding-top: 10rem;
+}
+.h1-2--portada span{
+    color: var(--color--verde-primario);
+}
+
+@media (max-width: 1050px) {
+    .container--portada {
+        background-image: url(assets/home/responsive.png);
+        background-position: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .titulos--portada {
+        padding: 5rem;
+        font-size: 2rem;
+    }
+}   
+
+/*=======================| SECCION QUE ES CROSSFIT |============================*/
+.cross--main {
+    background-image: url(assets/crossfit/crossfitbackg.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.cross--container {
+    display: flex;
+    width: 100%;
+    height: 58rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem;
+}
+.cross-titulo {
+    font-size: 5rem;
+    margin-bottom: 1.2rem;
+    padding-top: 10rem;
+    font-family: 'Semakin', sans-serif;
+    word-spacing: 1rem;
+}
+.cross-contenido {
+    font-size: 2.3rem;
+    text-align: justify;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+}
+.cross-contenido-resp {
+    display: none;
+}
+
+@media (max-width: 1050px){
+    .cross--main {
+        background-image: url(assets/crossfit/crossfitbackg.jpg);
+        height: auto;
+    }
+
+    .cross--container {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .cross-titulo {
+        font-size: 3rem;
+        padding-top: 8rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .cross-contenido {
+        font-size: 1.6rem;
+        text-align: justify;
+        padding-bottom: 12rem;
+    }
+}
+
+/*============================| SECCION DE HORARIOS |================================*/
 
 .hr-container {
     background-image: url('/assets/schedules/schedulesbackg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-    height: auto;
+    background-position: fixed;
+    width: 100%;
+    height: 105vh;
 }
-
-.hr-listcont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .hr-titulo {
-    position: relative;
-    font-family: normal;
-    font-weight: 100;
+    font-family: 'Semakin', sans-serif;
     text-align: center;
-    top: 90px;
-    letter-spacing: 6px;
-    font-size: 70px;
+    font-size: 8rem;
+    padding-top: 8rem;
+    margin-bottom: 6rem;
 }
 
 .hr-lista {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     display: flex;
-    margin-top: 150px;
     justify-content: center;
+    gap: 5rem;
+    margin-bottom: 8rem;
+}
+
+@media (max-width: 1050px) {
+    .hr-lista {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hr-container {
+        background-image: url('/assets/schedules/schedulesbackg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+        width: 100%;
+        height: 270vh;
+    }
+}
+
+/*Caja de horarios*/
+.caja {
+    display: grid;
+    grid-template-columns: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem;
+    grid-template-rows: 1.5rem 1.5rem 6rem 6rem 6rem 6rem;
+    width: fit-content;
+    height: fit-content;
+    gap: 0%;
+}
+
+.dias {
+    background-color: var(--color--blanco-primario);
+    padding-left: 0.4rem;
+    grid-column: 1/6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.40rem;
+    font-weight: 800;
+    grid-row: 1/3;
+    line-height: 3.3rem;
+    display: inline-block;
+}
+
+.dias-2 {
+    background-color: var(--color--blanco-primario);
+    padding-left: 0.7rem;
+    grid-column: 1/4;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.40rem;
+    font-weight: 800;
+    grid-row: 1/3;
+    line-height: 3.3rem;
+    display: inline-block;
 }
 
 .lista {
-    border: 3px solid black;
-    background-color: #3a93022e;
-    width: 210px;
-    height: 340px;
-    margin: 5px;
-}
-
-.hr-aa {
-    margin-left: -247px;
-}
-
-.hr-dias {
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    display: inline;
-    background-color: white;
-    font-size: 21px;
-    text-align: center;
-    width: 200px;
-    height: 33px;
-    left: -12px;
-    top: -28px;
-}
-
-.hr-find {
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    display: inline;
-    background-color: white;
-    font-size: 21px;
-    text-align: center;
-    width: 200px;
-    height: 33px;
-    left: 35px;
-    top: -28px;
-}
-
-.hr-open {
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    display: inline;
-    background-color: white;
-    font-size: 21px;
-    text-align: center;
-    width: 200px;
-    height: 33px;
-    left: 35px;
-    top: -28px;
-}
-
-.hr-am {
-    display: flex;
-    background-color: #000000;
-    height: 40px;
-    position: relative;
-    width: 70px;
-    color: var(--color--verde-primario);
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-family: NeuePlak-Bold;
-    padding: 0 3px 4px 0;
-    transform: rotate(-90deg);
-    left: 20px;
-    top: 20px;
-}
-
-.hr-am-pm {
-    display: flex;
-    background-color: #000000;
-    height: 40px;
-    position: relative;
-    width: 110px;
-    color: var(--color--verde-primario);
-    align-items: center;
-    justify-content: center;
-    font-size: 27px;
-    font-family: NeuePlak-Bold;
-    padding: 0 3px 4px 0;
-    transform: rotate(-90deg);
-    margin-left: -240px;
-    left: 40px;
-    top: 40px;
-}
-
-.hr-openbox {
-    display: flex;
-    background-color: #000000;
-    height: 40px;
-    position: relative;
-    width: 141px;
-    color: var(--color--verde-primario);
-    align-items: center;
-    justify-content: center;
-    margin-left: -270px;
-    font-size: 25px;
-    font-family: NeuePlak-Bold;
-    padding: 0 3px 4px 0;
-    transform: rotate(-90deg);
-    left: 56px;
-    top: 56px;
-}
-
-.ls-am {
+    border-color: var(--color--negro-primario);
+    border: 0.5rem solid;
+    grid-column: 2/8;
+    grid-row: 3/7;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: black;
-    font-size: 25px;
+}
+
+.elementos-lista {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+    justify-content: space-around;
+}
+
+.am-pm {
+    background-color: var(--color--negro-primario);
+    grid-row: 3/4;
+    grid-column: 1/2;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.aux {
+    transform: rotate(270deg);
+    color: var(--color--verde-primario);
+}
+
+.am-pm-2 {
+    background-color: var(--color--negro-primario);
+    grid-row: 3/5;
+    grid-column: 1/2;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding-left: 0.5rem;
+}
+
+.aux-2 {
+    transform: rotate(270deg);
+    color: var(--color--verde-primario);
+    grid-row: 3/5;
+    width: 10rem;
+    height: 10rem;
+}
+
+.am-pm-3 {
+    background-color: var(--color--negro-primario);
+    grid-row: 3/5;
+    grid-column: 1/2;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.9rem;
+    padding-left: 0.3rem;
+    padding-top: 0.5rem;
+}
+
+.aux-3 {
+    transform: rotate(270deg);
+    color: var(--color--verde-primario);
+    grid-row: 3/5;
+    width: 10.5rem;
+    height: 10rem;
 }
