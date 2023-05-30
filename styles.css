@@ -383,7 +383,7 @@ a {
     font-family: 'Semakin', sans-serif;
     text-align: center;
     font-size: 8rem;
-    padding-top: 8rem;
+    padding-top: 20rem;
     margin-bottom: 6rem;
 }
 
@@ -396,36 +396,8 @@ a {
     margin-bottom: 8rem;
 }
 
-@media (max-width: 1050px) {
-    .hr-titulo {
-        font-family: 'Semakin', sans-serif;
-        text-align: center;
-        font-size: 4rem;
-        padding-top: 8rem;
-        margin-bottom: 6rem;
-    }
-
-    .hr-lista {
-        display: grid;
-        grid-template-rows: auto auto auto auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hr-container {
-        background-image: url(assets/schedules/schedulesbackg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: fixed;
-        width: 100%;
-        height: 165vh;
-    }
-}
-
 /*Caja de horarios*/
-.caja {
+    .caja {
     display: grid;
     grid-template-columns: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem;
     grid-template-rows: 1.5rem 1.5rem 6rem 6rem 6rem 6rem;
@@ -478,7 +450,6 @@ a {
     font-size: 2.2rem;
     justify-content: space-around;
 }
-
 .am-pm {
     background-color: var(--color--negro-primario);
     grid-row: 3/4;
@@ -536,4 +507,33 @@ a {
     grid-row: 3/5;
     width: 10.5rem;
     height: 10rem;
+}
+
+@media (max-width: 1050px) {
+    .hr-titulo {
+        font-family: 'Semakin', sans-serif;
+        text-align: center;
+        font-size: 4rem;
+        padding-top: 14rem;
+        margin-bottom: 6rem;
+    }
+
+    .hr-lista {
+        display: grid;
+        grid-template-columns: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hr-container {
+        background-image: url(assets/schedules/schedulesbackg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+        width: 100%;
+        height: auto;
+        padding-bottom: 10rem;
+    }
 }
