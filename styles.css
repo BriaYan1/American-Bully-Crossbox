@@ -370,7 +370,7 @@ a {
 /*============================| SECCION DE HORARIOS |================================*/
 
 .hr-container {
-    background-image: url('/assets/schedules/schedulesbackg.jpg');
+    background-image: url(assets/schedules/schedulesbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -396,6 +396,14 @@ a {
 }
 
 @media (max-width: 1050px) {
+    .hr-titulo {
+        font-family: 'Semakin', sans-serif;
+        text-align: center;
+        font-size: 4rem;
+        padding-top: 8rem;
+        margin-bottom: 6rem;
+    }
+
     .hr-lista {
         display: grid;
         grid-template-rows: auto auto auto auto;
@@ -406,7 +414,7 @@ a {
     }
 
     .hr-container {
-        background-image: url('/assets/schedules/schedulesbackg.jpg');
+        background-image: url(assets/schedules/schedulesbackg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: fixed;
