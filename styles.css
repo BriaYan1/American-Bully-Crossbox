@@ -64,13 +64,13 @@ a {
     justify-content: space-between;
     width: 100%;
     height: 7rem;
-    /* position: fixed; */
     background-color: var(--color--negro-primario);
     z-index: 2;
 }
 .nav--left{
     display: flex;
     align-items: center;
+    width: 100%;
 }
 .nav--logo{
     padding-left: 1.5rem;
@@ -82,6 +82,10 @@ a {
 }
 .btn--contactologin{
     display: none;
+}
+.nav--elements{
+    display: flex;
+    justify-content: space-between;
 }
 .nav--elements ul{
     display: flex;
@@ -110,6 +114,9 @@ a {
     cursor: pointer;
     align-items: center;
     justify-content: center;
+}
+.nav--rigth-2{
+    display: none;
 }
 .nav--right{
     display: flex;
@@ -174,58 +181,81 @@ a {
 
 @media (max-width: 1050px) {
     /* Estilizando la barra de navegación */
-    .button--abrir{
+    .button--abrir {
         display: flex;
         align-items: center;
         text-align: center;
         justify-content: center;
         padding-right: 2rem;
     }
-    .button--abrir:hover{
+
+    .button--abrir:hover {
         color: var(--color--blanco-primario);
         transition: all 0.3s;
     }
-    .btn--contactologin{
+
+    .btn--contactologin {
         display: block;
+        margin: 0 1rem;
     }
-    .btn-1{
+
+    .btn-1 {
         font-weight: bold;
-        padding-top: 14rem;
         background-color: transparent;
         cursor: pointer;
-        padding-left: 1.5rem;
+        padding-left: 0;
     }
-    .btn-1:hover{
+
+    .btn-1:hover {
         color: var(--color--verde-primario);
         transition: all 0.4s;
     }
-    .btn-2{
+
+    .btn-2 {
         font-weight: bold;
         font-size: 1.6rem;
         cursor: pointer;
+        align-items: end;
     }
-    .btn-2:hover{
+
+    .btn-2:hover {
         color: var(--color--negro-primario);
         background-color: var(--color--verde-terciario);
         transition: all 0.4s;
     }
-    .button--cerrar{
+
+    .container--ul ul button img{
         display: flex;
         align-items: center;
-        text-align: center;
+        justify-content: flex-end;
+
+    }
+
+    .button--cerrar {
+        display: flex;
+        align-items: center;
         justify-content: flex-end;
     }
-    .button--cerrar:hover{
+
+    .button--cerrar:hover {
         color: var(--color--blanco-primario);
         transition: all 0.3s;
     }
-    .nav--right{
+    .nav--rigth-2{ /* ************************ */
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        align-self: flex-start;
+    }
+    .nav--right {
         display: none;
     }
-    .nav--elements{
-        position: fixed;
+    
+    .nav--elements {
         display: flex;
-        width: 23rem;
+        position: fixed;
+        width: 30vh;
         top: 0;
         right: 0;
         background: var(--color--negro-primario);
@@ -233,33 +263,40 @@ a {
         padding: 2rem 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
         flex-direction: column;
-        align-items: end;
-        gap: 5rem;
         opacity: 0;
         visibility: hidden;
+        justify-content: space-between;
     }
-    .nav--elements li img{
+
+    .container--ul li img {
         display: flex;
         padding-right: 1rem;
         padding-top: 0.4rem;
     }
-    .nav--elements li span{
+
+    .container--ul li span {
         padding-left: 1rem;
         padding-top: 0.8rem;
     }
-    .nav--elements a{
+
+    .container--ul a {
         display: flex;
     }
-    .nav--elements ul{
+
+    .container--ul ul {
+        padding-top: 1rem;
         flex-direction: column;
         gap: 3rem;
         align-items: normal;
     }
-    .visible{
+
+    .visible {
         opacity: 1;
         visibility: visible;
     }
+
 }
+
 
 /*=======================| SECCION PORTADA / 740 px de alto queda bien la imagen |============================*/
 .container--portada{
