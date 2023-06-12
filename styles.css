@@ -405,6 +405,105 @@ a {
     }
 }
 
+/*============================| SECCION DE COACHES |================================*/
+
+.coa-container {
+    background-image: url(assets/coaches/coachesbackg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    width: 100%;
+    height: 105vh;
+}
+
+/*Caja de horarios*/
+.caja-coa {
+    display: grid;
+    grid-template-columns: 3rem 3rem 3rem 3rem 3rem 5rem 5rem 5rem;
+    grid-template-rows: 1.5rem 6rem 6rem 6rem 6rem 6rem;
+    width: fit-content;
+    height: fit-content;
+    gap: 0%;
+}
+
+.caja-img {
+    border-color: var(--color--negro-primario);
+    border: 0.5rem solid;
+    grid-column: 2/8;
+    grid-row: 1/7;
+    display: flex;
+}
+
+.caja-img img {
+    width: 100%;
+}
+
+.headcoach {
+    background-color: var(--color--negro-primario);
+    grid-row: 1/4;
+    grid-column: 1/2;
+    font-size: 2rem;
+    padding-left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aux-hcoa {
+    transform: rotate(270deg);
+    color: var(--color--verde-primario);
+    grid-row: 1/5;
+    font-weight: bolder;
+    font-size: 1.8rem;
+}
+
+.coach {
+    background-color: var(--color--negro-primario);
+    grid-row: 1/4;
+    grid-column: 1/2;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding-left: 0.5rem;
+}
+
+.aux-coa {
+    transform: rotate(270deg);
+    color: var(--color--verde-primario);
+    grid-row: 3/5;
+    width: 10rem;
+    height: 10rem;
+}
+
+@media (max-width: 1050px) {
+    .hr-titulo {
+        font-family: 'Semakin', sans-serif;
+        text-align: center;
+        font-size: 4rem;
+        padding-top: 14rem;
+        margin-bottom: 6rem;
+    }
+
+    .hr-lista {
+        display: grid;
+        grid-template-columns: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .coa-container {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+        width: 100%;
+        height: auto;
+        padding-bottom: 10rem;
+    }
+}
+
 /*============================| SECCION DE HORARIOS |================================*/
 
 .hr-container {
@@ -420,7 +519,7 @@ a {
     font-family: 'Semakin', sans-serif;
     text-align: center;
     font-size: 8rem;
-    padding-top: 20rem;
+    padding-top: 10rem;
     margin-bottom: 6rem;
 }
 
@@ -551,7 +650,7 @@ a {
         font-family: 'Semakin', sans-serif;
         text-align: center;
         font-size: 4rem;
-        padding-top: 14rem;
+        padding-top: 10rem;
         margin-bottom: 6rem;
     }
 
