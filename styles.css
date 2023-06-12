@@ -416,11 +416,20 @@ a {
     height: 105vh;
 }
 
+.cajas-coach {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+    margin-bottom: 8rem;
+}
+
 /*Caja de horarios*/
 .caja-coa {
     display: grid;
     grid-template-columns: 3rem 3rem 3rem 3rem 3rem 5rem 5rem;
-    grid-template-rows: 3rem 6rem 6rem 6rem 6rem 6rem;
+    grid-template-rows: 3rem 6rem 6rem 6rem 6rem 7rem;
     width: fit-content;
     height: fit-content;
     gap: 0%;
@@ -480,22 +489,30 @@ a {
     grid-row: 3/7;
     grid-column: 1/2;
     font-family: 'Poppins', sans-serif;
-    padding-top: 5.5rem;
+    padding-top: 13.8rem;
 }
 
 .coach-name-2{
     grid-row: 3/7;
     grid-column: 1/2;
     font-family: 'Poppins', sans-serif;
-    padding-top: 11rem;
+    padding-top: 22rem;
 }
 
-.aux-name{
+.coach-name-3{
+    grid-row: 3/7;
+    grid-column: 1/2;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 15rem;
+}
+
+.aux-name {
     transform: rotate(270deg);
     color: var(--color--negro-primario);
     grid-row: 3/7;
-    font-weight: bolder;
-    font-size: 2rem; 
+    font-weight: 900;
+    font-size: 1.8rem;
+    white-space: nowrap;
 }
 
 @media (max-width: 1050px) {
@@ -507,7 +524,7 @@ a {
         margin-bottom: 6rem;
     }
 
-    .hr-lista {
+    .cajas-coach {
         display: grid;
         grid-template-columns: auto;
         display: flex;
