@@ -476,6 +476,28 @@ a {
     font-size: 2rem;
 }
 
+.coach-name{
+    grid-row: 3/7;
+    grid-column: 1/2;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 5.5rem;
+}
+
+.coach-name-2{
+    grid-row: 3/7;
+    grid-column: 1/2;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 11rem;
+}
+
+.aux-name{
+    transform: rotate(270deg);
+    color: var(--color--negro-primario);
+    grid-row: 3/7;
+    font-weight: bolder;
+    font-size: 2rem; 
+}
+
 @media (max-width: 1050px) {
     .hr-titulo {
         font-family: 'Semakin', sans-serif;
