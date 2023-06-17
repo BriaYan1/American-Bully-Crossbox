@@ -650,7 +650,7 @@ a {
     font-family: 'Semakin', sans-serif;
     text-align: center;
     font-size: 8rem;
-    padding-top: 15rem;
+    padding-top: 10rem;
     margin-bottom: 5rem;
 }
 
@@ -861,5 +861,9 @@ a {
     .hr-lista-2{
         display: flex;
         flex-direction: column;
+    }
+
+    .hr-lista-2 .caja:last-child {
+        margin-top: 2rem;
     }
 }
