@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/5a8265bcfc.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,19 +20,20 @@
       <nav class="nav--container">
         <div class="nav--left">
           <div class="nav--logo">
-            <a href="index.html"><img src="assets/logo/logotype.png" loading="lazy" alt="logo" class="logo-img"></a>
+            <a href="#inicio"><img src="assets/logo/logotype.png" loading="lazy" alt="logo" class="logo-img" data-aos="zoom-in" data-aos-duration="1000"></a>
           </div>
           
             <div class="nav--elements" id="nav">
               <div class="container--ul">
                 <ul>
-                  <button class="button--cerrar" id="cerrar"><img src="assets/logos-menu/cruz.png" loading="lazy" alt="cerrar"></button>
-                  <li><a href="index.html"><img src="assets/logos-menu/hogar.png" loading="lazy" alt="Inicio"><span>INICIO</span></a></li>
-                  <li><a href="./horario.html"><img src="assets/logos-menu/gimnasio.png" loading="lazy" alt="CrossFit"><span>CROSSFIT</span></a></li>
-                  <li><a href="./horario.html"><img src="assets/logos-menu/correr.png" loading="lazy" alt="Caches"><span>COACHES</span></a></li>
-                  <li><a href="#"><img src="assets/logos-menu/trofeo.png" loading="lazy" alt="Competencias"><span>COMPETENCIAS</span></a></li>
-                  <li><a href="#"><img src="assets/logos-menu/calendario-reloj.png" loading="lazy" alt="Horarios"><span>HORARIOS</span></a></li>
-                  <li><a href="#"><img src="assets/logos-menu/memorandum.png" loading="lazy" alt="Planes"><span>PLANES</span></a></li>
+                  <button class="button--cerrar" id="cerrar"><img src="assets/logos-menu/cerrar.png" loading="lazy" alt="cerrar"></button>
+                  <li data-aos="zoom-in" data-aos-duration="1000"><a href="#inicio"><img src="assets/logos-menu/hogar.png" loading="lazy" alt="Inicio"><span>INICIO</span></a></li>
+                  <li data-aos="zoom-in" data-aos-duration="1000"><a href="#crossfit"><img src="assets/logos-menu/silueta-frontal-levantador-de-pesas.png" loading="lazy" alt="CrossFit"><span>CROSSFIT</span></a></li>
+                  <li data-aos="zoom-in" data-aos-duration="1000"><a href="#"><img src="assets/logos-menu/gimnasio.png" loading="lazy" alt="CrossFit"><span>SOBRE NOSOTROS</span></a></li>
+                  <li data-aos="zoom-in" data-aos-duration="1000"><a href="#coaches"><img src="assets/logos-menu/entrenador.png" loading="lazy" alt="Caches"><span>COACHES</span></a></li>
+                  <li data-aos="zoom-in" data-aos-duration="1000"><a href="#"><img src="assets/logos-menu/trofeo.png" loading="lazy" alt="Competencias"><span>COMPETENCIAS</span></a></li>
+                  <li data-aos="zoom-in" data-aos-duration="1000"><a href="#horarios"><img src="assets/logos-menu/calendario.png" loading="lazy" alt="Horarios"><span>HORARIOS</span></a></li>
+                  <li data-aos="zoom-in" data-aos-duration="1000"><a href="#"><img src="assets/logos-menu/plan-de-accion.png" loading="lazy" alt="Planes"><span>PLANES</span></a></li>
                 </ul>
               </div>
               <div class="nav--rigth-2">
@@ -41,14 +42,14 @@
               </div>
             </div>
             <div class="nav--right">
-              <div class="contact"><button class="btn-1">Contacto</button></div>
-              <div class="contact"><button class="btn-2">Login</button></div>
+              <div class="contact" data-aos="zoom-in" data-aos-duration="1000"><button class="btn-1">Contacto</button></div>
+              <div class="contact" data-aos="zoom-in" data-aos-duration="1000"><button class="btn-2">Login</button></div>
             </div>
           </div>
           
           
       </div>
-          <button class="button--abrir" id="abrir"><img src="assets/logos-menu/menu-hamburguesa.png" loading="lazy" alt="menu-hamburguesa"></button>
+          <button class="button--abrir scale-up-center" id="abrir"><img src="assets/logos-menu/menu.png" loading="lazy" alt="menu-hamburguesa" ></button>
       </nav>
   </header>
 
@@ -56,9 +57,9 @@
         <!-- =======================| SECCION PORTADA / PAGINA PRINCIPAL |============================ -->
         <section>
           <article class="article">
-            <div class="container--portada">
+            <div class="container--portada" id="inicio">
               <div class="titulos--portada">
-                <div class="container--titulos">
+                <div class="container--titulos" data-aos="zoom-out-up" data-aos-duration ="1000">
                   <h1 class="h1--portada">FISICAMENTE FUERTES</h1>
                   <h1 class="h1-2--portada">MENTALMENTES <span>INDESTRUCTIBLES</span></h1>
                 </div>
@@ -69,9 +70,9 @@
 
         <!-- =======================| SECCION QUE ES CROSSFIT |============================ -->
         <section class="cross--main">
-          <article class="cross--container">
-            <h2 class="cross-titulo">¿Qué Es Croosfit?</h2>
-            <p class="cross-contenido">
+          <article class="cross--container" id="crossfit">
+            <h2 class="cross-titulo" data-aos="fade-right" data-aos-duration="2000">¿Qué Es Croosfit?</h2>
+            <p class="cross-contenido" data-aos="fade-up" data-aos-duration="2000">
               CrossFit se define como un sistema de entrenamiento de fuerza y
               acondicionamiento basado en ejercicios funcionales constantemente
               variados realizados a una alta intensidad. <br><br> Esto significa que nos
@@ -82,19 +83,19 @@
               solo en una experiencia exigente durante la cual el carácter lúdico y
               la camaradería cobran un papel primordial,<br> sino también en un programa
               insuperable para desarrollar las diez capacidades físicas generales:<br><br>
-              <strong> cardiovascular, resistencia energética, fuerza,
+              <span class="strong"> cardiovascular, resistencia energética, fuerza,
               flexibilidad, potencia, velocidad, coordinación, agilidad, equilibrio
-              y precisión.</strong>
+              y precisión.</span>
             </p>
           </article>
         </section>
 
         <!-- =======================| SECCION COACHES |============================ -->
-        <section class="coa-container">
-          <div class="hr-titulo">COACHES</div>
+        <section class="coa-container" id="coaches">
+          <div class="hr-titulo" data-aos="fade-right" data-aos-duration="2000">COACHES</div>
 
-            <section class="cajas-coach">
-              <div class="caja-coa">
+            <div class="cajas-coach">
+              <div class="caja-coa" data-aos="flip-left" data-aos-duration="2000">
                   <div class="headcoach">
                     <p class="aux-hcoa">HEADCOACH</p>
                   </div>
@@ -106,7 +107,7 @@
                 </div>
               </div>
       
-              <div class="caja-coa">
+              <div class="caja-coa" data-aos="flip-left" data-aos-duration="2000">
                 <div class="coach">
                   <p class="aux-coa">COACH</p>
                 </div>
@@ -118,7 +119,7 @@
                 </div>
               </div>
       
-              <div class="caja-coa">
+              <div class="caja-coa" data-aos="flip-left" data-aos-duration="2000">
                   <div class="coach">
                     <p class="aux-coa">COACH</p>
                   </div>
@@ -129,7 +130,7 @@
                     <img src="assets/coaches/coachandry.jpg" alt="Takeo" loading="lazy">
                   </div>
               </div>
-            </section>
+            </d>
         </section>
 
         <!--En espera-->
@@ -138,78 +139,88 @@
         </section>
 
         <!-- =======================| SECCION HORARIOS |============================ -->
-        <section class="hr-container">
-          <div class="hr-titulo">HORARIOS</div>
+        <section class="hr-container" id="horarios">
+          <div class="hr-titulo" data-aos="fade-right" data-aos-duration="2000">HORARIOS</div>
 
-            <section class="hr-lista">
-              <div class="caja">
-                <div class="dias"><p>LUNES A VIERNES</p></div>
-                  <div class="am-pm">
-                    <p class="aux">AM</p>
-                  </div>
-                <div class="lista">
-                  <ul class="elementos-lista">
-                    <li>6:00 - 7:00</li>
-                    <li>7:00 - 8:00</li>
-                    <li>8:00 - 9:00</li>
-                    <li>9:00 - 10:00</li>
-                    <li>10:00 - 11:00</li>
-                    <li>11:00 - 12:00</li>
-                  </ul>
-                </div>
-              </div>
-      
-              <div class="caja">
-                <div class="am-pm">
-                  <p class="aux">PM</p>
-                </div>
-                <div class="lista">
-                  <ul class="elementos-lista">
-                    <li>2:00 - 3:00</li>
-                    <li>3:00 - 4:00</li>
-                    <li>4:00 - 5:00</li>
-                    <li>5:00 - 6:00</li>
-                    <li>6:00 - 7:00</li>
-                    <li>7:00 - 8:00</li>
-                    <li>8:00 - 9:00</li>
-                  </ul>
-                </div>
-              </div>
-      
-              <div class="caja">
-                <div class="dias-2"><p>SABADOS</p></div>
-                  <div class="am-pm-2">
-                    <p class="aux-2">AM - PM</p>
-                  </div>
-                <div class="lista">
-                  <ul class="elementos-lista">
-                    <li>9:00 - 10:00</li>
-                    <li>10:00 - 11:00</li>
-                    <li>11:00 - 12:00</li>
-                    <li>12:00 - 1:00</li>
-                  </ul>
-                </div>
-              </div>
-      
-              <div class="caja">
-                <div class="dias"><p>LUNES A VIERNES</p></div>
-                  <div class="am-pm-3">
-                    <p class="aux-3">OPEN BOX</p>
-                  </div>
-                    <div class="lista">
-                      <ul class="elementos-lista">
-                        <li>9:00 - 10:00</li>
-                        <li>10:00 - 11:00</li>
-                        <li>11:00 - 12:00</li>
-                        <li>12:00 - 1:00</li>
-                      </ul>
+            <div class="hr-lista"> <!--Contenedor padre-->
+              <div class="hr-lista-1">
+                <div class="caja" data-aos="zoom-out-up" data-aos-duration="1500">
+                  <div class="dias"><p>LUNES A VIERNES</p></div>
+                    <div class="am-pm">
+                      <p class="aux">AM</p>
                     </div>
+                  <div class="lista">
+                    <ul class="elementos-lista">
+                      <li>6:00 - 7:00</li>
+                      <li>7:00 - 8:00</li>
+                      <li>8:00 - 9:00</li>
+                      <li>9:00 - 10:00</li>
+                      <li>10:00 - 11:00</li>
+                      <li>11:00 - 12:00</li>
+                    </ul>
+                  </div>
+                </div>
+        
+                <div class="caja" data-aos="zoom-out-up" data-aos-duration="1500">
+                  <div class="am-pm">
+                    <p class="aux">PM</p>
+                  </div>
+                  <div class="lista">
+                    <ul class="elementos-lista">
+                      <li>2:00 - 3:00</li>
+                      <li>3:00 - 4:00</li>
+                      <li>4:00 - 5:00</li>
+                      <li>5:00 - 6:00</li>
+                      <li>6:00 - 7:00</li>
+                      <li>7:00 - 8:00</li>
+                      <li>8:00 - 9:00</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-            </section>
+             
+              <div class="hr-lista-2">
+                <div class="caja" data-aos="zoom-out-up" data-aos-duration="1500">
+                  <div class="dias-2"><p>SABADOS</p></div>
+                    <div class="am-pm-2">
+                      <p class="aux-2">AM - PM</p>
+                    </div>
+                  <div class="lista">
+                    <ul class="elementos-lista">
+                      <li>9:00 - 10:00</li>
+                      <li>10:00 - 11:00</li>
+                      <li>11:00 - 12:00</li>
+                      <li>12:00 - 1:00</li>
+                    </ul>
+                  </div>
+                </div>
+        
+                <div class="caja" data-aos="zoom-out-up" data-aos-duration="1500">
+                  <div class="dias"><p>LUNES A VIERNES</p></div>
+                    <div class="am-pm-3">
+                      <p class="aux-3">OPEN BOX</p>
+                    </div>
+                      <div class="lista">
+                        <ul class="elementos-lista">
+                          <li>9:00 - 10:00</li>
+                          <li>10:00 - 11:00</li>
+                          <li>11:00 - 12:00</li>
+                          <li>12:00 - 1:00</li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+            </div>
         </section>
 
     </main>
 
     <script src="main.js"></script>
+    
+    <!--Libreria para animaciones-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
