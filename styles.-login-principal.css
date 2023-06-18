@@ -1,0 +1,191 @@
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("/assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Italic";
+    src: url("/assets/fonts/Poppins/Poppins-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("/assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-BoldItalic";
+    src: url("/assets/fonts/Poppins/Poppins-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Black";
+    src: url("/assets/fonts/Poppins/Poppins-Black.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-BlackItalic";
+    src: url("/assets/fonts/Poppins/Poppins-BlackItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Schabo-Condensed";
+    src: url("/assets/fonts/SCHABO-Condensed.otf") format("truetype");
+}
+@font-face {
+    font-family: "Semakin";
+    src: url("/assets/fonts/Semakin.otf") format("truetype");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family:sans-serif;
+}
+:root{
+    --color--verde-primario: #60ff00;
+    --color--verde-secundario: #44B200;
+    --color--verde-terciario: #8FFF4C;
+    --color--negro-primario: #000000;
+    --color--negro-secundario: #1A1A1A;
+    --color--blanco-primario: #FFFFFF;
+    --color--blanco-secundario: #E5E5E5;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 750px) {
+    .login-movil {
+        background-color: #1A1A1A;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contenedor-padre {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .volver-atras {
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+        justify-content: flex-start;
+        height: 5rem;
+        width: 100%;
+        padding-left: 1.5rem;
+    }
+
+    .volver-atras-texto {
+        color: var(--color--verde-primario);
+        font-size: 1.3rem;
+        padding-left: 1rem;
+    }
+
+    .flecha {
+        width: 1.5rem;
+    }
+
+    .login-logo img {
+        width: 15rem;
+        margin-top: 3rem;
+        display: inline-block;
+    }
+
+    .login-titulo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .amigo {
+        font-family: "Poppins-Bold";
+        margin-top: 3rem;
+        font-size: 3rem;
+        color: var(--color--blanco-primario);
+    }
+
+    .que-hacer {
+        font-family: "Poppins-Regular";
+        font-size: 1.5rem;
+        color: var(--color--blanco-primario);
+    }
+
+    .login-botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3.5rem;
+    }
+
+    .inicio-sesion {
+        background-color: transparent;
+        border: none;
+    }
+
+    .registro {
+        background-color: transparent;
+        border: none;
+    }
+
+    .login-botones a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20rem;
+        justify-content: center;
+        height: 3rem;
+        text-decoration: none;
+        padding: 2rem;
+        border: var(--color--verde-primario) solid;
+        border-radius: 2rem;
+        color: var(--color--verde-primario);
+        font-family: "Poppins-Bold";
+        font-size: 1.3rem;
+    }
+
+    .login-botones a:hover {
+        background-color: var(--color--verde-primario);
+        color: var(--color--negro-primario);
+        transition: all 0.4s;
+    }
+
+    .login-autenticacion {
+        margin-top: 5rem;
+    }
+
+    .login-autenticacion h4 {
+        font-family: "Poppins-Bold";
+        font-size: 1.4rem;
+        color: white;
+    }
+
+    .texto-botones {
+        font-size: 1.5rem;
+    }
+
+    .registro {
+        padding-top: 2rem;
+    }
+
+    .registrate-con {
+        color: var(--color--blanco-primario);
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .logos {
+        padding: 1rem;
+    }
+
+    .logos:hover {
+        color: var(--color--blanco-primario);
+    }
+}
+    
