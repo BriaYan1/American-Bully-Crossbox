@@ -196,7 +196,7 @@ a {
     .nav--elements {
         display: flex;
         position: fixed;
-        width: 30vh;
+        width: 32vh;
         top: 0;
         right: 0;
         background: var(--color--negro-primario);
