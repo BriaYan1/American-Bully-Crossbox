@@ -294,7 +294,7 @@ a {
     }
 
     .scale-up-center{
-        animation:scale-up-center 2s; 
+        animation:scale-up-center 1.5s; 
     } 
     
     @keyframes scale-up-center{ 
