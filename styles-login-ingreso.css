@@ -63,22 +63,6 @@ body {
     padding: 4rem;
 }
 
-.volver-atras {
-    display: flex;
-    align-items: center;
-}
-
-.flecha-atras {
-    width: 2rem;
-}
-
-.texto-atras {
-    font-family: "Poppins-Bold";
-    font-size: 1.5rem;
-    color: var(--color--verde-primario);
-    padding-left: 1rem;
-}
-
 /* --------------------CONTENEDOR DE LOS 3 CONTENEDORES --------------------*/
 .contenedor-contenedores {
     display: flex;
