@@ -152,9 +152,10 @@ body {
 }
 
 .boton:hover {
-    background-color: var(--color--verde-primario);
     color: var(--color--negro-primario);
+    background-color: var(--color--verde-primario);
     transition: all 0.4s;
+    
 }
 
 .registrate-con {
