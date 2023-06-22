@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("/assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Italic";
+    src: url("/assets/fonts/Poppins/Poppins-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("/assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-BoldItalic";
+    src: url("/assets/fonts/Poppins/Poppins-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Black";
+    src: url("/assets/fonts/Poppins/Poppins-Black.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-BlackItalic";
+    src: url("/assets/fonts/Poppins/Poppins-BlackItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Schabo-Condensed";
+    src: url("/assets/fonts/SCHABO-Condensed.otf") format("truetype");
+}
+@font-face {
+    font-family: "Semakin";
+    src: url("/assets/fonts/Semakin.otf") format("truetype");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family:sans-serif;
+}
+:root{
+    --color--verde-primario: #60ff00;
+    --color--verde-secundario: #44B200;
+    --color--verde-terciario: #8FFF4C;
+    --color--negro-primario: #000000;
+    --color--negro-secundario: #1A1A1A;
+    --color--blanco-primario: #FFFFFF;
+    --color--blanco-secundario: #E5E5E5;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--color--negro-secundario);
+    background-image: url(assets/home/homebackg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--color--verde-primario);
+    font-family: "Poppins-Bold";
+    margin: 2rem 0rem 0rem 2rem;
+    font-size: 1rem;
+}
+
+.logo img {
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+.contenedor-principal {
+        margin: 4rem 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+@media (max-width: 540px) {
+    .contenedor-principal {
+        margin: 4rem 4rem;
+} 
+}
+
+.titulo {
+    color: var(--color--verde-primario);
+    font-family: "Poppins-Bold";
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.escudo {
+    width: 10rem;
+    margin-bottom: 3rem;
+}
+
+.subtitulo {
+    color: var(--color--verde-primario);
+    font-family: "Poppins-Regular";
+    font-size: 3rem;
+}
+
+.parrafo {
+    color: var(--color--blanco-primario);
+    font-family: "Poppins-Regular";
+    font-size: 2rem;
+    text-align: justify;
+}
