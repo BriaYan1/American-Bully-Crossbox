@@ -64,7 +64,7 @@ body {
 }
 
 .volver-atras {
-    display: flex;
+    display: inline-flex;
     align-items: center;
 }
 
@@ -190,6 +190,21 @@ body {
 }
 
 @media (max-width: 540px) {
+    .contenedor-principal {
+        padding: 2rem;
+    }
+
+    .flecha-atras {
+        width: 1rem;
+    }
+    
+    .texto-atras {
+        font-family: "Poppins-Bold";
+        font-size: 1rem;
+        color: var(--color--verde-primario);
+        padding-left: 1rem;
+    }
+
     .contenedor-medio {
         display: none;
     }

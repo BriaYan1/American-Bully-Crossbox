@@ -170,7 +170,7 @@ a {
 
 .nav--right{
     display: flex;
-    width: 45%; /*Hace que sobre notros se vea de forma lineal y no un texto encima de otro*/
+    width: 100%;
     height: auto;
     align-items: center;
     justify-content: flex-end;
@@ -508,6 +508,7 @@ a {
     width: fit-content;
     height: fit-content;
     gap: 0%;
+    position: relative;
 }
 
 .headcoach {
@@ -589,6 +590,39 @@ a {
     font-family: 'Poppins', sans-serif;
     padding-top: 13.8rem;
 }
+
+/*HOVER COACHES*/
+
+.caja-texto{
+    grid-column: 2/8;
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+    font-family: "Poppins-Regular";
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+ .caja-texto--titulo{
+    margin-top: 2rem;
+    color: var(--color--verde-primario);
+}
+ .caja-texto--parrafo{
+    color: var(--color--blanco-primario);
+    padding-top: 5rem;
+    text-align: center;
+}
+ .caja-coa:hover .caja-texto{
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 
 /*VERSION TABLET*/
 
