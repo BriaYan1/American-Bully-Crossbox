@@ -871,7 +871,7 @@ a {
         text-align: center;
         font-size: 4rem;
         padding-top: 10rem;
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
     }
 
     .hr-lista {
@@ -909,24 +909,26 @@ a {
     height: 104.5vh;
 }
 
-.hr-titulo {
-    font-family: 'Semakin', sans-serif;
-    text-align: center;
-    font-size: 8rem;
-    padding-top: 10rem;
-    margin-bottom: 5rem;
+.container-planes {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .caja-planes {
     display: grid;
     grid-template-columns: 3rem 5rem 20rem;
-    grid-template-rows: 3rem 7rem 7rem 5rem;
-    width: 15rem;
+    grid-template-rows: 4rem 7rem 7rem 5rem;
+}
+
+.caja-planes:nth-child(2) {
+    display: grid;
+    grid-template-columns: 3rem 5rem 20rem;
+    grid-template-rows: 4rem 9rem 5.3rem 5rem;
 }
 
 .dias-plan {
     grid-column: 1 / 4;
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-family: "Poppins-Bold";
 }
 
@@ -936,11 +938,17 @@ a {
     font-family: "Poppins-Bold";
     background-color: var(--color--negro-primario);
     color: var(--color--verde-primario);
-    writing-mode:sideways-lr;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
 }
 
 .tipo-plan p {
     padding-bottom: 1.2rem;
+    transform: rotate(270deg);
+    padding-top: 1.3rem;
 }
 
 .precio-plan {
@@ -954,21 +962,91 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.precio-plan p {
-    margin: 0;
-    flex-grow: 1;
+    text-align: center;
 }
 
 .tiempo-plan {
     grid-row: 4 / 5;
     grid-column: 2 / 4;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: "Poppins-Bold";
     background-color: var(--color--negro-primario);
     color: var(--color--verde-primario);
     text-align: center;
+}
+
+.inscripcion {
+    display: flex;
+    margin-top: 6rem;
+    justify-content: center;
+    font-size: 2rem;
+}
+.inscrip-1 {
+    color: var(--color--blanco-primario);
+    background-color: var(--color--negro-primario);
+    display: inline-block;
+    padding: 0.3rem 0rem 0.3rem 1rem;
+    font-family: "Poppins-Bold";
+}
+
+.inscrip-2 {
+    color: var(--color--verde-primario);
+    background-color: var(--color--negro-primario);
+    display: inline-block;
+    padding: 0.3rem 1rem 0.3rem 0rem;
+    font-family: "Poppins-Bold";
+}
+
+.clases-parrafo {
+    display: flex;
+    margin-top: 4rem;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.asterisco {
+    color: var(--color--verde-primario);
+    font-family: "Poppins-Bold";
+}
+
+.parrafo-clases {
+    font-family: "Poppins-Regular";
+}
+
+.parrafo-clases:nth-child(2) {
+    margin-left: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .planes-container {
+        height: auto;
+    }
+
+    .container-planes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caja-planes {
+        margin-top: 4rem;
+    }
+
+    .caja-planes:nth-child(1) {
+        margin-top: 0rem;
+    }
+
+    .clases-parrafo {
+        display: flex;
+        flex-direction: column;
+        margin: 4rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .parrafo-clases:nth-child(2) {
+        margin-left: 0rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
 }
