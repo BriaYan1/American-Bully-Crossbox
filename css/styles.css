@@ -2,30 +2,17 @@
     font-family: "Poppins-Regular";
     src: url("/assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
 }
-@font-face {
-    font-family: "Poppins-Italic";
-    src: url("/assets/fonts/Poppins/Poppins-Italic.ttf") format("truetype");
-}
+
 @font-face {
     font-family: "Poppins-Bold";
     src: url("/assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
 }
-@font-face {
-    font-family: "Poppins-BoldItalic";
-    src: url("/assets/fonts/Poppins/Poppins-BoldItalic.ttf") format("truetype");
-}
+
 @font-face {
     font-family: "Poppins-Black";
     src: url("/assets/fonts/Poppins/Poppins-Black.ttf") format("truetype");
 }
-@font-face {
-    font-family: "Poppins-BlackItalic";
-    src: url("/assets/fonts/Poppins/Poppins-BlackItalic.ttf") format("truetype");
-}
-@font-face {
-    font-family: "Schabo-Condensed";
-    src: url("/assets/fonts/SCHABO-Condensed.otf") format("truetype");
-}
+
 @font-face {
     font-family: "Semakin";
     src: url("/assets/fonts/Semakin.otf") format("truetype");
@@ -110,8 +97,7 @@ a {
 }
 
 .nav--elements ul li{
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    font-family: "Poppins-Bold";
     font-size: 1.6rem;
     color: var(--color--blanco-primario);
     cursor: pointer;
@@ -910,4 +896,79 @@ a {
     .hr-lista-2 .caja:last-child {
         margin-top: 2rem;
     }
+}
+
+/*============================| SECCION DE PLANES |================================*/
+
+.planes-container {
+    background-image: url(/assets/plans/plansbackg\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    width: 100%;
+    height: 104.5vh;
+}
+
+.hr-titulo {
+    font-family: 'Semakin', sans-serif;
+    text-align: center;
+    font-size: 8rem;
+    padding-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.caja-planes {
+    display: grid;
+    grid-template-columns: 3rem 5rem 20rem;
+    grid-template-rows: 3rem 7rem 7rem 5rem;
+    width: 15rem;
+}
+
+.dias-plan {
+    grid-column: 1 / 4;
+    font-size: 2rem;
+    font-family: "Poppins-Bold";
+}
+
+.tipo-plan {
+    grid-row: 2 / 3;
+    font-size: 2rem;
+    font-family: "Poppins-Bold";
+    background-color: var(--color--negro-primario);
+    color: var(--color--verde-primario);
+    writing-mode:sideways-lr;
+}
+
+.tipo-plan p {
+    padding-bottom: 1.2rem;
+}
+
+.precio-plan {
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+    font-size: 4rem;
+    font-family: "Semakin";
+    border-color: var(--color--negro-primario);
+    border: 0.4rem solid;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.precio-plan p {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.tiempo-plan {
+    grid-row: 4 / 5;
+    grid-column: 2 / 4;
+    font-size: 2.5rem;
+    font-family: "Poppins-Bold";
+    background-color: var(--color--negro-primario);
+    color: var(--color--verde-primario);
+    text-align: center;
 }
