@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles-login-ingreso.css">
+    <link rel="stylesheet" href="/css/styles-login-ingreso.css">
     <link rel="icon" href="/assets/logo/logotype.png" type="icono">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>American Bully CrossBox - Iniciar Sesión</title>
@@ -16,13 +16,13 @@
                 <p class="titulo-1" data-aos="zoom-in" data-aos-duration="2000">¡Bienvenido de vuelta!</p>
                 <p class="titulo-2" data-aos="zoom-in" data-aos-duration="2000">Inicia sesión en tu cuenta</p>
 
-                <form>
+                <form id="formulario-login" >
                     <fieldset class="formulario" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
-                        <label class="labels">Correo</label>
-                        <input type="mail" class="inputs" placeholder="Ingresa tu correo">
+                        <label class="labels" for="correo">Correo</label>
+                        <input type="mail" class="inputs" name="correo" id="correo" placeholder="Ingresa tu correo">
 
-                        <label class="labels">Contraseña</label>
-                        <input type="mail" class="inputs" placeholder="Ingresa tu clave">
+                        <label class="labels" for="clave">Contraseña</label>
+                        <input type="mail" class="inputs" name="clave" id="clave" placeholder="Ingresa tu clave">
                     </fieldset>
                 </form>
 
@@ -33,8 +33,8 @@
                 <p class="registrate-con" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">O ingresa con</p>
 
                 <div class="logos-redes" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
-                    <img class="logos-redes" src="assets/iconos/buscar.png" alt="Gmail">
-                    <img class="logos-redes" src="assets/iconos/facebook.png" alt="Facebook">
+                    <img class="logos-redes" src="/assets/iconos/buscar.png" alt="Gmail">
+                    <img class="logos-redes" src="/assets/iconos/facebook.png" alt="Facebook">
                 </div>
 
                 <p class="olvido-contrasena" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">¿Olvidaste tu contraseña?</p>
@@ -43,7 +43,7 @@
             <div class="contenedor-medio" data-aos="zoom-in" data-aos-duration="2000"></div>
 
             <div class="contenedor-derecho">
-                <img class="logo-box" src="assets/logo/logotype.png" alt="Logo American Bully CrossBox" data-aos="zoom-in" data-aos-duration="2000">
+                <img class="logo-box" src="/assets/logo/logotype.png" alt="Logo American Bully CrossBox" data-aos="zoom-in" data-aos-duration="2000">
             </div>
         </div>
     </div>

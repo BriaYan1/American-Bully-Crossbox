@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+    <title>American Bully CrossBox - Registro</title>
+    <link rel="stylesheet" href="/css/styles-login-registro.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="contenedor-contenedores">
+            <div class="contenedor-izquierdo">
+                <p class="titulo-1" data-aos="zoom-in" data-aos-duration="2000">Registro</p>
+                <p class="titulo-2" data-aos="zoom-in" data-aos-duration="2000">Crea una cuenta</p>
+
+                <form id="formulario" data-aos="zoom-in" data-aos-duration="2000">
+                    <fieldset class="formulario">
+                        <div class="grid-campos">
+                            <div class="campo" id="campo-nombre">
+                                <label class="labels" for="nombre">Nombre</label>
+                                <input class="inputs " type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                                <p class="formulario-error">El nombre solo puede tener letras</p>
+                            </div>
+
+                            <div class="campo" id="campo-apellido">
+                                <label class="labels" for="apellido">Apellido</label>
+                                <input class="inputs " type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+                                <p class="formulario-error">El apellido solo puede tener letras</p>
+                            </div>
+
+                            <div class="campo" id="campo-correo">
+                                <label class="labels" for="correo">Correo</label>
+                                <input class="inputs " type="email" id="correo" name="correo" placeholder="Correo electronico" required>
+                                <p class="formulario-error">El correo solo puede contener <br> letras,  numeros, espacio, puntos, <br> guiones y guion bajo</p>
+                            </div>
+
+                            <div class="campo" id="campo-confirmar-correo">
+                                <label class="labels" for="confirmar-correo">Confirmar Correo</label>
+                                <input class="inputs " type="email" id="confirmar-correo" name="confirmar-correo" placeholder="Confirmar correo electronico" required>
+                                <p class="formulario-error">Los correos no coinciden </p>
+                            </div>
+
+                            <div class="campo" id="campo-clave">
+                                <label class="labels" form="clave">Contraseña</label>
+                                <input class="inputs " type="password" id="clave" name="clave" placeholder="Crea una contraseña" required>
+                                <img class="logo-ojo" src="/assets/logos-formulario/invisible.png" alt="lgo-ojo" id="ojo">
+                                <p class="formulario-error">La contraseña debe tener minimo <br> 8 caracteres, una mayuscula, una<br> minuscula, un caracter especial y <br> un numero</p>
+                            </div>
+
+                            <div class="campo" id="campo-confirmar-clave">
+                                <label class="labels" for="confirmar-clave">Confirmar contraseña</label>
+                                <input class="inputs " type="password" id="confirmar-clave" name="confirmar-clave" placeholder="Confirmar contraseña" required>
+                                <img class="logo-ojo" src="/assets/logos-formulario/invisible.png" alt="lgo-ojo" id="ojo-clave">
+                                <p class="formulario-error">Las contraseñas no coinciden</p>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </form>
+
+                <p class="registrate-con">Al hacer click en registrarte, aceptas <br> nuestras <a class="subrayado" href="politicas.html" target="_blank"><span class="politicas">políticas de privacidad</span></a> y <br> <a class="subrayado" href="terminos.html" target="_blank"><span class="politicas">términos de servicio</span></a></p>
+
+                    <div class="formulario-no-enviado" id="formulario-no-enviado">
+                        <p>Completa todos los campos</p>
+                    </div>
+
+                    <div class="botones">
+                        <button type="submit" class="boton" id="registrarse">Registrate</button>
+                        <div class="formulario-enviado">El usuario ha sido registrado</div>
+                    </div>
+                
+
+                <p class="titulo-2 titulo-tablet" data-aos="zoom-in" data-aos-duration="2000">Si ya tienes una cuenta <a class="subrayado" href="login-ingreso.html"><span class="politicas">inicia sesión</span></a></p>
+            </div>
+
+            <div class="contenedor-medio" data-aos="zoom-in" data-aos-duration="2000"></div>
+
+            <div class="contenedor-derecho">
+                <img class="logo-box" data-aos="zoom-in-up" data-aos-duration="2000" src="/assets/logo/logotype.png" alt="Logo American Bully CrossBox">
+
+                <p class="titulo-3" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1500">¡Ya estamos casi <br> listos!</p>
+                <p class="titulo-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">Si ya tienes una cuenta <a class="subrayado" href="./login-ingreso.html"><span class="politicas">inicia sesión</span></a></p>
+            </div>
+        </div>
+    </div>
+    <script src="/js/validar-login-registro.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

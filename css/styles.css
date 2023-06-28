@@ -315,7 +315,7 @@ a {
 
 /*=======================| SECCION PORTADA|============================*/
 .container--portada{
-    background-image: url(assets/home/homebackg.jpg);
+    background-image: url(/assets/home/homebackg.jpg);
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -348,7 +348,7 @@ a {
 
 @media screen and (min-width: 768px) and (max-width: 1030px){
     .container--portada {
-        background-image: url(assets/home/responsive.png);
+        background-image: url(/assets/home/responsive.png);
         background-position: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -366,7 +366,7 @@ a {
 
 @media screen and (max-width: 768px){
     .container--portada {
-        background-image: url(assets/home/responsive.png);
+        background-image: url(/assets/home/responsive.png);
         background-position: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -382,7 +382,7 @@ a {
 
 /*=======================| SECCION QUE ES CROSSFIT |============================*/
 .cross--main {
-    background-image: url(assets/crossfit/crossfitbackg.jpg);
+    background-image: url(/assets/crossfit/crossfitbackg.jpg);
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -423,7 +423,7 @@ a {
 
 @media screen and (min-width: 768px) and (max-width: 1030px) {
     .cross--main {
-        background-image: url(assets/crossfit/crossfitbackg.jpg);
+        background-image: url(/assets/crossfit/crossfitbackg.jpg);
         height: auto;
     }
 
@@ -451,7 +451,7 @@ a {
 
 @media screen and (max-width: 768px) {
     .cross--main {
-        background-image: url(assets/crossfit/crossfitbackg.jpg);
+        background-image: url(/assets/crossfit/crossfitbackg.jpg);
         height: auto;
     }
 
@@ -478,7 +478,7 @@ a {
 /*============================| SECCION DE COACHES |================================*/
 
 .coa-container {
-    background-image: url(assets/coaches/coachesbackg.jpg);
+    background-image: url(/assets/coaches/coachesbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -508,7 +508,6 @@ a {
     width: fit-content;
     height: fit-content;
     gap: 0%;
-    position: relative;
 }
 
 .headcoach {
@@ -546,12 +545,14 @@ a {
     white-space: nowrap;
 }
 
-.caja-img {
+.contenedor{
     border-color: var(--color--negro-primario);
     border: 0.5rem solid;
     grid-column: 2/8;
     grid-row: 1/7;
-    display: flex;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
 }
 
 .caja-img img {
@@ -593,34 +594,43 @@ a {
 
 /*HOVER COACHES*/
 
-.caja-texto{
-    grid-column: 2/8;
-    height: 34rem;
+.contenedor-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor-textos{
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    right: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 1.3rem;
-    font-family: "Poppins-Regular";
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
+    justify-content: center;
+    transition: 0.7s;
 }
- .caja-texto--titulo{
-    margin-top: 2rem;
+
+.contenedor-titulo{
+    font-size: 2rem;
+    font-family: 'Poppins-Regular';
+    font-weight: 600;
     color: var(--color--verde-primario);
+    padding: 2rem;
 }
- .caja-texto--parrafo{
+
+.contenedor-parrafo{
+    font-size: 1rem;
+    font-family: 'Poppins-Regular';
+    font-weight: 300;
     color: var(--color--blanco-primario);
-    padding-top: 5rem;
-    text-align: center;
+    padding: 2rem;
 }
- .caja-coa:hover .caja-texto{
-    cursor: pointer;
-    visibility: visible;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.8);
+
+.contenedor:hover .contenedor-textos{
+    bottom: 0;
 }
 
 
@@ -672,7 +682,7 @@ a {
 /*============================| SECCION DE HORARIOS |================================*/
 
 .hr-container {
-    background-image: url(assets/schedules/schedulesbackg.jpg);
+    background-image: url(/assets/schedules/schedulesbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -822,7 +832,7 @@ a {
 
 @media screen and (min-width: 768px) and (max-width: 1030px) {
     .hr-container {
-        background-image: url(assets/schedules/schedulesbackg.jpg);
+        background-image: url(/assets/schedules/schedulesbackg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: fixed;
@@ -861,7 +871,7 @@ a {
 
 @media screen and (max-width: 768px) {
     .hr-container {
-        background-image: url(assets/schedules/schedulesbackg.jpg);
+        background-image: url(/assets/schedules/schedulesbackg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: fixed;

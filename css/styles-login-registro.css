@@ -137,6 +137,7 @@ body {
 .campo {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .grid-campos {
@@ -165,12 +166,68 @@ input {
     font-family: "Poppins-Regular";
 }
 
-
-
 .inputs:focus {
     outline: none;
     border: solid 2.5px var(--color--verde-primario);
 }
+
+.logo-ojo{
+    width: 3rem;
+    position: absolute;
+    top: 3.7rem;
+    left: calc(86px + 50%);
+    opacity: 0.6;
+}
+
+.logo-ojo:hover{
+    opacity: 1;
+}
+
+/****************Clases a usar en la validacion del formulario****************/
+
+.formulario-error{
+    margin-bottom: 0;
+    font-family: "Poppins-Regular";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+    display: none;
+}
+
+.formulario-error-activo{
+    display: block;
+}
+
+.inputs-error .inputs{
+    border: solid 2px red;
+}
+
+.formulario-no-enviado{
+    margin-bottom: 0;
+    font-family: "Poppins-Regular";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+    display: none;
+}
+
+.formulario-no-enviado-activo {
+    display: block;
+}
+
+.formulario-enviado{
+    margin-bottom: 0;
+    font-family: "Poppins-Regular";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color--blanco-primario);
+    display: none;
+}
+
+.formulario-enviado-activo{
+    display: block;
+}
+/**********************************************************************************/
 
 .botones {
     display: flex;
