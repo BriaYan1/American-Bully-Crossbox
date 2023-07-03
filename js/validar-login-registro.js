@@ -31,8 +31,8 @@ const campos = {
     clave: false,
     confirm_clave: false,
     fechaNacimiento: false,
-    confirmarCorreo :false
-}
+    confirmarCorreo: false
+};
 
 const validarInput = (input) => { /*(input) es como la i en un for, es la variable de control de la funcion*/
 const campo = input.parentElement; /*obtiene el elemento padre del input actual y lo asigna a la variable campo. El padre es el div que tiene la clase campo.*/
@@ -104,48 +104,70 @@ switch (input.name) { // seleciona el nombre del input
             campos.confirm_clave = false;
         }
     break;
-
-    default:
-    break;
   }
 };
-
+    
 inputs.forEach((input) => { // valida todos los inputs del formulario
     input.addEventListener('keyup', () => validarInput(input)); // keyip valida cuando se esta escribiendo en el input
     input.addEventListener('blur', () => validarInput(input)); // blur valida cuando se hace clic fuera del formulario al estar escribiendo y hace que de un error
 });
 
-const boton_registro = document.getElementById('registrarse');
-if (boton_registro) {
-    boton_registro.addEventListener('click', (e) => {
+const botonRegistro = document.getElementById('registrarse');
+if (botonRegistro) {
+    botonRegistro.addEventListener('click', (e) => {
         e.preventDefault(); // hace que al dar submit no se envie nada a ningun lado
         inputs.forEach((input) => {
-            validarInput(input); // ejecuta validar input para todos los inputs del formulario
+            validarInput(input); //ejecuta validar input para todos los inputs del formulario
         });
-    
-        if (campos.nombreYApellido && campos.correo && campos.clave && campos.confirm_clave && campos.confirmarCorreo)
-        {
-            setTimeout(()=>{
-                formulario.reset();
-            }, 2000);
 
+        if (campos.nombreYApellido && campos.correo && campos.clave && campos.confirm_clave && campos.confirmarCorreo) { //valida que todos los campos esten llenos
+            Swal.fire({
+                title: 'Usuario Registrado!',
+                text: 'Haz click en el botón para continuar!',
+                icon: 'success'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'login-ingreso.html' // Reemplaza con la URL de la página a la que deseas redirigir
+                }
+            });
+            
             document.getElementById('formulario-no-enviado').classList.remove('formulario-no-enviado-activo');
-            document.getElementById('formulario-enviado').classList.add('formulario-enviado-activo');
-            formulario.reset();
-            setTimeout(()=>{
-                document.getElementById('formulario-enviado').classList.remove('formulario-enviado-activo');
-            }, 2000);
-        }else{
+            
+            const usuarioIngresado = document.getElementById('correo').value; // guarda el dato ingresado en el input correo
+            const claveIngresada = document.getElementById('clave').value; // guarda el dato ingresado en el input clave
+    
+            localStorage.setItem('usuarioIngreso', usuarioIngresado); // guardo en localStprage los datos ingresados 
+            localStorage.setItem('claveIngreso', claveIngresada); // guardo en localStorage los datos ingresados 
+            
+        } else {
             document.getElementById('formulario-no-enviado').classList.add('formulario-no-enviado-activo');
         }
     
     });
 }
 
+/***************************INICIAR SESION**************************************/
 
+const ingresar = document.getElementById('ingresar'); // seleciona el id enviar del boton de inciar sesion
+if (ingresar) {
+ingresar.addEventListener("click", (e) => {
+    const validarIngreso = document.getElementById('correo-ingreso').value; // obtiene el id del input correo
+    const validarClave = document.getElementById('clave-ingreso').value; // obtiene el id del input contraseña
+    const usuarioIngresado = localStorage.getItem('usuarioIngreso'); // guarda lo que esta alcenado en la llave de localStorage de correo
+    const claveIngresada = localStorage.getItem('claveIngreso'); // guarda lo que esta alcenado en la llave de localStorage de contraseña
 
+        if (validarIngreso === usuarioIngresado && validarClave === claveIngresada) { // valida que lo que se escriba en el input correo y contraseña coincidan con lo que hay guardado en local store
+            window.location.href = 'vista-login-ingreso'; // se accede al login (evento de ventana)
+        } else {
 
-
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...Algo salió mal!',
+                text: 'Verifica los datos ingresados!'
+            });
+        }   
+    });
+}   
 
 /*************MOSTRAR CONTRASEÑA***********************/
 
@@ -163,7 +185,7 @@ ojo.addEventListener( "click", function() { // se agrega el evento al hacer clic
     }
 });
 
-/*Codigo para confirmar clave*/
+/*Codigo para confirmar clave registro*/
 
 const ojo_clave = document.getElementById('ojo-clave');
 const input_ojo_clave = document.getElementById('confirmar-clave');
@@ -178,3 +200,6 @@ ojo_clave.addEventListener( "click", function() {
         ojo_clave.style.opacity = 0.6;
     }
 });
+
+
+

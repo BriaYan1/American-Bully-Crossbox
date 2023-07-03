@@ -18,23 +18,23 @@
 
                 <form id="formulario-login" >
                     <fieldset class="formulario" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
-                        <label class="labels" for="correo">Correo</label>
-                        <input type="mail" class="inputs" name="correo" id="correo" placeholder="Ingresa tu correo">
 
-                        <label class="labels" for="clave">Contraseña</label>
-                        <input type="mail" class="inputs" name="clave" id="clave" placeholder="Ingresa tu clave">
+                        <div class="container-correo">
+                            <label class="labels" for="correo-ingreso">Correo</label>
+                            <input type="mail" class="inputs" name="correo" id="correo-ingreso" placeholder="Ingresa tu correo">
+                        </div>
+                        
+                        <div class="container-contrasena">
+                            <label class="labels" for="clave-ingreso">Contraseña</label>
+                            <input type="password" class="inputs" name="clave" id="clave-ingreso" placeholder="Ingresa tu clave">
+                            <img class="logo-ojo" src="/assets/logos-formulario/invisible.png" alt="lgo-ojo" id="ojo-inicio">
+                        </div>
+                        
                     </fieldset>
                 </form>
 
                 <div class="botones" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
-                    <button class="boton">Iniciar sesión</button>
-                </div>
-
-                <p class="registrate-con" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">O ingresa con</p>
-
-                <div class="logos-redes" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
-                    <img class="logos-redes" src="/assets/iconos/buscar.png" alt="Gmail">
-                    <img class="logos-redes" src="/assets/iconos/facebook.png" alt="Facebook">
+                    <button class="boton" id="ingresar" type="submit">Iniciar sesión</button>
                 </div>
 
                 <p class="olvido-contrasena" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">¿Olvidaste tu contraseña?</p>
@@ -47,9 +47,13 @@
             </div>
         </div>
     </div>
+
+    <script src="/js/login-ingreso.js"></script>
+    <script src="/js/validar-login-registro.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

@@ -118,13 +118,28 @@ body {
 .formulario {
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: none;
     color: var(--color--verde-primario);
+}
+
+.container-correo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-contrasena{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
 }
 
 .labels {
     font-size: 1.8rem;
     font-family: "Poppins-Regular";
+    padding-left: 0.5rem;
 }
 
 input {
@@ -171,23 +186,6 @@ input {
     transition: all 0.4s;
 }
 
-.registrate-con {
-    font-size: 1.3rem;
-    color: var(--color--blanco-primario);
-    font-family: "Poppins-Regular";
-    text-align: center;
-    padding-bottom: 2rem;
-    margin-top: 3rem;
-}
-
-.logos-redes {
-    margin: 0.5rem 1rem 0rem 1rem;
-    width: 10rem;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-}
-
 .olvido-contrasena {
     color: var(--color--blanco-primario);
     padding-top: 3rem;
@@ -195,6 +193,18 @@ input {
     font-family: "Poppins-Regular";
     cursor: pointer;
     text-align: center;
+}
+
+.logo-ojo{
+    width: 3rem;
+    position: absolute;
+    top: 3.7rem;
+    left: calc(86px + 50%);
+    opacity: 0.6;
+}
+
+.logo-ojo:hover{
+    opacity: 1;
 }
 
 .olvido-contrasena:hover {
