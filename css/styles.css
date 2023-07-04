@@ -665,6 +665,88 @@ a {
         align-items: center;
     }
 }
+
+/*============================| SECCION DE COMPETENCIAS |================================*/
+
+.compe-container {
+    background-image: url(/assets/competitions/competitionsbackg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    width: 100%;
+    height: 104.5vh; /*Hace que coincidan las lineas d los fondos, debe ir en todos los tamaños de contenedores el mismo valor*/
+}
+
+.titulo-compe {
+    color: var(--color--blanco-primario);
+}
+
+.contenedor-cajas {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.caja-competencia {
+    width: 18rem;
+    height: 29.8rem;
+    background-color: var(--color--blanco-primario);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-caja-compe {
+    font-size: 1.80rem;
+    font-family: "Poppins-Bold";
+    text-align: center;
+}
+
+.img-compe {
+    object-fit: cover;
+    width: 16.5rem;
+    height: 26.3rem;
+}
+
+.imagen-compe {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-compe {
+    width: 5rem;
+    position: absolute;
+    right: -1.5rem;
+    bottom: -1.5rem;
+}
+
+.logo-andes {
+    width: 7rem;
+    right: -2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .compe-container {
+        height: auto;
+        width: 100%;
+    }
+
+    .contenedor-cajas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caja-competencia {
+        margin-bottom: 4rem;
+    }
+
+    .caja-competencia:nth-child(4) {
+        margin-bottom: 10rem;
+    }
+}
+
 /*============================| SECCION DE HORARIOS |================================*/
 
 .hr-container {
