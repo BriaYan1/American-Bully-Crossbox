@@ -61,6 +61,10 @@ body {
 /* --------------------CONTENEDOR PRINCIPAL --------------------*/
 .contenedor-principal {
     padding: 4rem;
+    background-image: url(/assets/login/loginbackg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
 .volver-atras {

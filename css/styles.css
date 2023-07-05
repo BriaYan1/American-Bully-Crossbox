@@ -592,10 +592,10 @@ a {
     bottom: -100%;
     right: 0;
     position: absolute;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     transition: 0.7s;
 }
 
@@ -604,15 +604,28 @@ a {
     font-family: 'Poppins-Regular';
     font-weight: 600;
     color: var(--color--verde-primario);
-    padding: 2rem;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.span{
+    color: var(--color--verde-primario);
+    font-weight: bold;
 }
 
 .contenedor-parrafo{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: 'Poppins-Regular';
     font-weight: 300;
     color: var(--color--blanco-primario);
-    padding: 2rem;
+    padding: 1rem;
+}
+
+.descripcion-coach{
+    font-size: 1.2rem;
+    font-family: 'Poppins-Regular';
+    font-weight: 300;
+    color: var(--color--verde-primario);
+    padding-left: 1rem;
 }
 
 .contenedor:hover .contenedor-textos{
@@ -711,6 +724,16 @@ a {
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.descripcion-competencia{
+    position: absolute;
+    text-align: center;
+    padding-top: 15rem;
+    font-family: "Poppins-Bold";
+    color: var(--color--verde-primario);
+    font-size: 1.3rem;
+    padding-left: 1.3rem
 }
 
 .logo-compe {
