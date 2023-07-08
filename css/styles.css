@@ -697,6 +697,14 @@ a {
 .contenedor-cajas {
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
+}
+
+.caja-competencia-padre{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .caja-competencia {
@@ -748,7 +756,30 @@ a {
     right: -2.5rem;
 }
 
-@media screen and (max-width: 768px) {
+.boton{
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton a button{
+    background-color: var(--color--verde-primario);
+    color: var(--color--negro-primario);
+    border: none;
+    height: 3rem;
+    width: 10rem;
+    font-family: "Poppins-Bold";
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.boton a button:hover{
+    background-color: var(--color--verde-terciario);
+    transition: all 0.4s;
+}
+
+@media screen and (max-width: 1030px) {
 
     .compe-container {
         height: auto;
@@ -768,7 +799,14 @@ a {
     .caja-competencia:nth-child(4) {
         margin-bottom: 10rem;
     }
+
+    .boton{
+        padding-top: 0;
+        padding-bottom: 3rem;
+    }
 }
+
+
 
 /*============================| SECCION DE HORARIOS |================================*/
 

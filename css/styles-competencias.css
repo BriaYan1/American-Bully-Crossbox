@@ -43,7 +43,7 @@ html{
 
 .contenedor-principal {
     background-color: var(--color--negro-primario);
-    height: 120vh;
+    
     padding: 3rem 8rem;
 }
 
@@ -79,21 +79,42 @@ html{
     margin-bottom: 3rem;
 }
 
-.imagenes img {
-    width: 100%;
-    height: auto;
-    border: var(--color--verde-primario) solid 0.3rem;
-    border-radius: 2rem;
-}
-
-.caja-imagen p {
-    color: var(--color--blanco-primario);
-    text-align: center;
-    margin-top: 1rem;
-}
-
 .imagenes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 3rem;
+}
+
+.imagenes img {
+    width: 80%;
+    height: 80%;
+    border: var(--color--verde-primario) solid 0.3rem;
+    border-radius: 2rem;
+}
+
+.caja-imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resaltado{
+    color: var(--color--verde-primario);
+    font-family: "Poppins-Bold";
+    font-size: 1.5rem;
+}
+
+.caja-imagen p{
+    padding-bottom: 1.2rem;
+    color: var(--color--blanco-primario);
+    font-family: "Poppins-Regular";
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1030px) {
+    .imagenes{
+        grid-template-columns: 1fr 1fr;
+    }
 }
