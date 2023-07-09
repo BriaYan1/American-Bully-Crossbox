@@ -1182,7 +1182,6 @@ a {
     .clases-parrafo {
         display: flex;
         flex-direction: column;
-        margin: 4rem;
         text-align: center;
         font-size: 2rem;
     }
@@ -1191,5 +1190,105 @@ a {
         margin-left: 0rem;
         margin-top: 3rem;
         margin-bottom: 3rem;
+    }
+}
+
+/*============================| SECCION DE CONTACTO |================================*/
+
+.contacto-container {
+    background-image: url(/assets/login/loginbackg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10rem;
+}
+
+.container-contacto-menu {
+    display: flex;
+    justify-content:space-evenly;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.contacto-titulo {
+    color: var(--color--verde-primario);
+    font-family: "Poppins-Bold";
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.direccion {
+    display: flex;
+    color: var(--color--blanco-primario);
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 1rem 0rem;
+}
+
+.direccion img {
+    margin-right: 1rem;
+}
+
+.contacto-derecho {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contacto-derecho span {
+    color: var(--color--verde-primario);
+    font-family: "Poppins-Bold";
+    font-size: 2rem;
+}
+
+.contacto-derecho a {
+    color: var(--color--blanco-primario);
+    font-size: 1.5rem;
+}
+
+.contacto-derecho a:hover {
+    color: var(--color--verde-primario);
+    transition: all 0.4s;
+}
+
+.container-linea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linea {
+    background-color: var(--color--verde-primario);
+    height: 0.1rem;
+    width: 80%;
+    margin: 3rem 0rem;
+}
+
+.footer-final {
+    display: flex;
+    color: var(--color--blanco-primario);
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-final p {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.footer-final span {
+    color: var(--color--verde-primario);
+}
+
+@media screen and (max-width: 520px) {
+    .contacto-container {
+        padding: 3rem;
+    }
+
+    .container-contacto-menu {
+        flex-direction: column;
+        padding: 3rem;
     }
 }
