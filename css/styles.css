@@ -198,12 +198,12 @@ a {
 }
 
 .login-panel {
-    display: flex;
+    display: grid;
+    grid-template-columns: 4.5rem auto;
     align-items: center;
     justify-items: center;
     width: 18rem;
-    border-radius: 1rem;
-    background-color: var(--color--negro-secundario);
+    background-color: var(--color--negro-primario);
 }
 
 .logo-perfil{
@@ -226,8 +226,8 @@ a {
 
 .barra-deslizadora-container {
     position: fixed;
-    margin-top: 12.5rem;
-    width: 13.5rem;
+    margin-top: 10.5rem;
+    width: 16rem;
     height: 6.5rem;
     cursor: default;
 }
@@ -427,6 +427,7 @@ a {
         color: var(--color--verde-primario);
     }
 
+
     /* BARRA DESLIZANTE DE PERFIL EN MOVIL */
 
     .barra-deslizadora-movil-container {
@@ -613,6 +614,95 @@ a {
         padding-bottom: 12rem;
     }
 }
+
+/*=======================| SECCION NOSOTROS |============================*/
+
+.carrusel_container {
+    background-image: url(/assets/competitions/competitionsbackg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    width: 100%;
+    height: 140vh; /*Hace que coincidan las lineas d los fondos, debe ir en todos los tamaños de contenedores el mismo valor*/
+}
+
+.parrafo_nosotros-contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+.parrafo_nosotros {
+    color: var(--color--blanco-primario);
+    font-family: "Poppins-Regular";
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 80%;
+    margin-bottom: 3rem;
+}
+
+.div_contenedor_slider {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-slider {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    padding: 0rem 4rem;
+}
+
+.slider-izquierdo, .slider-derecho {
+    width: 5%;
+}
+
+.slider-izquierdo img, .slider-derecho img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.slider-imagenes {
+    width: 90%;
+}
+
+.slider-imagenes img {
+    height: 50rem;
+    width: 5rem;
+    object-fit: cover;
+}
+
+.slider-imagenes img {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1030px) {
+    .carrusel_container {
+        height: auto;
+    } 
+
+    .contenedor-slider {
+        padding-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .carrusel_container {
+        height: auto;
+    }
+
+    .slider-imagenes img {
+        height: 35rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .contenedor-slider {
+        margin-bottom: 6rem;
+    }
+}
+
 
 /*============================| SECCION DE COACHES |================================*/
 
@@ -818,8 +908,8 @@ a {
         background-size: cover;
         background-position: fixed;
         width: 100%;
-        height: auto;
-        padding-bottom: 10rem;
+        height: 100%;
+        padding-bottom: 6rem;
     }
 
     .cajas-coach {
@@ -1350,13 +1440,13 @@ a {
 /*============================| SECCION DE CONTACTO |================================*/
 
 .contacto-container {
-    background-image: url(/assets/login/loginbackg.jpg);
+    background-image: url(/assets/competitions/competitionsbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
     width: 100%;
     height: 100%;
-    padding-bottom: 10rem;
+    padding-bottom: 4rem;
 }
 
 .container-contacto-menu {
@@ -1379,6 +1469,11 @@ a {
     align-items: center;
     font-size: 1.5rem;
     padding: 1rem 0rem;
+}
+
+.direccion a {
+    color: var(--color--blanco-primario);
+    text-decoration: none;
 }
 
 .direccion img {
@@ -1430,6 +1525,7 @@ a {
 .footer-final p {
     margin: 0.5rem;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .footer-final span {

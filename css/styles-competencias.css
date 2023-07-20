@@ -42,8 +42,10 @@ html{
 }
 
 .contenedor-principal {
-    background-color: var(--color--negro-primario);
-    
+    background-image: url(/assets/competitions/competitionsbackg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
     padding: 3rem 8rem;
 }
 
@@ -97,6 +99,10 @@ html{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.caja-imagen p {
+    margin-top: 2rem;
 }
 
 .resaltado{
