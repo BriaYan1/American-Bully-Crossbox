@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles-login-ingreso.css">
     <link rel="icon" href="/assets/logo/logotype.png" type="icono">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>American Bully CrossBox - Iniciar Sesión</title>
 </head>
 <body>
@@ -13,11 +12,11 @@
 
         <div class="contenedor-contenedores">
             <div class="contenedor-izquierdo">
-                <p class="titulo-1" data-aos="zoom-in" data-aos-duration="2000">¡Bienvenido de vuelta!</p>
-                <p class="titulo-2" data-aos="zoom-in" data-aos-duration="2000">Inicia sesión en tu cuenta</p>
+                <p class="titulo-1">¡Bienvenido de vuelta!</p>
+                <p class="titulo-2">Inicia sesión en tu cuenta</p>
 
                 <form id="formulario-login" >
-                    <fieldset class="formulario" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+                    <fieldset class="formulario" >
 
                         <div class="container-correo">
                             <label class="labels" for="correo-ingreso">Correo</label>
@@ -33,27 +32,24 @@
                     </fieldset>
                 </form>
 
-                <div class="botones" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+                <div class="botones" >
                     <button class="boton" id="ingresar" type="submit">Iniciar sesión</button>
                 </div>
 
-                <p class="olvido-contrasena" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">¿Olvidaste tu contraseña?</p>
+                <p class="olvido-contrasena" >¿No tienes una cuenta? <span> <a href="/html/login-registro.html">¡REGISTRATE AQUÍ!</span></a></p>
             </div>
 
-            <div class="contenedor-medio" data-aos="zoom-in" data-aos-duration="2000"></div>
+            <div class="contenedor-medio"></div>
 
             <div class="contenedor-derecho">
-                <img class="logo-box" src="/assets/logo/logotype.png" alt="Logo American Bully CrossBox" data-aos="zoom-in" data-aos-duration="2000">
+                <img class="logo-box" src="/assets/logo/logotype.png" alt="Logo American Bully CrossBox">
             </div>
         </div>
     </div>
 
     <script src="/js/login-ingreso.js"></script>
     <script src="/js/validar-login-registro.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

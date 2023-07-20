@@ -96,13 +96,18 @@ a {
     gap: 2rem; /* Agrega espacio entre elementos */
 }
 
-.nav--elements ul li{
-    font-family: "Poppins-Bold";
+.nav--elements ul li {
+    font-family: 'Poppins-Bold';
     font-size: 1.6rem;
     color: var(--color--blanco-primario);
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    transition: transform 120ms linear;
+}
+
+.nav--elements ul li:hover {
+    transform: scale(1.07);
 }
 
 .nav--elements ul li img{
@@ -110,11 +115,11 @@ a {
 }
 .nav--elements ul li a {
     color: var(--color--blanco-primario);
+    transition: color 300ms;
 }
+
 .nav--elements ul li a:hover{
-    font-size: 1.7rem;
     color: var(--color--verde-primario);
-    transition: all 0.4s;
 }
 
 .nav--rigth-2{
@@ -174,6 +179,105 @@ a {
     cursor: pointer;
 }
 
+.sesion-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.sesion-activa {
+    position: relative;
+    display: flex;
+    height: auto;
+    width: 40rem;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 4rem;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.login-panel {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 18rem;
+    border-radius: 1rem;
+    background-color: var(--color--negro-secundario);
+}
+
+.logo-perfil{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.logo-perfil img{
+    width: 3rem;
+    margin: 0.5rem;
+}
+
+.name-perfil {
+    font-family: 'Poppins-Bold';
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--color--verde-primario);
+}
+
+.barra-deslizadora-container {
+    position: fixed;
+    margin-top: 12.5rem;
+    width: 13.5rem;
+    height: 6.5rem;
+    cursor: default;
+}
+
+.barra-deslizadora {
+    background-color: var(--color--negro-primario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    cursor: default;
+    opacity: 0;
+    transform: translateY(-1rem);
+    transition: opacity 150ms linear, transform 150ms linear;
+    pointer-events: none;
+}
+
+.barra-deslizadora-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.barra-deslizadora li {
+    color: var(--color--blanco-primario);
+    list-style: none;
+    margin-top: 0.5rem;
+    font-family: 'Poppins-Bold';
+    font-size: 1.5rem;
+    text-align: center;
+    transition: color 250ms linear, transform 150ms linear;
+}
+
+.barra-deslizadora li:hover {
+    color: var(--color--verde-primario);
+    transform: scale(1.05);
+}
+
+.barra-deslizadora a {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+}
+
+.barra-deslizadora.barra-deslizadora-visible a {
+    cursor: pointer;
+    pointer-events: auto;
+}
 
 /*VERSION TABLET MENU HAMBURGUESA*/
 
@@ -297,7 +401,76 @@ a {
         opacity: 1;
         visibility: visible;
     }
+
+    /* PERFIL movil */
+
+    .sesion-container-movil {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .sesion-activa {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .login-panel{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .name-perfil {
+        font-size: 1.3rem;
+        color: var(--color--verde-primario);
+    }
+
+    /* BARRA DESLIZANTE DE PERFIL EN MOVIL */
+
+    .barra-deslizadora-movil-container {
+        position: fixed;
+        margin-left: auto;
+        margin-right: 2rem;
+        width: 17rem;
+        height: 10.5rem;
+        cursor: default;
+        margin-bottom: 16.5rem;
+    }
+
+    .barra-deslizadora-movil {
+        background-color: var(--color--negro-primario);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+        opacity: 0;
+        transform: translateY(1rem);
+        transition: opacity 150ms linear, transform 150ms linear;
+        pointer-events: none;
+    }
+
+    .barra-deslizadora-movil-visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .barra-deslizadora-movil ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .barra-deslizadora-movil a {
+        font-size: 1.5rem;
+    }
 }
+
+
 
 /*=======================| SECCION PORTADA|============================*/
 .container--portada{
@@ -375,6 +548,7 @@ a {
     width: 100%;
     height: 104.5vh; /*Hace que coincidan las lineas d los fondos, debe ir en todos los tamaños de contenedores el mismo valor*/
 }
+
 .cross--container {
     display: flex;
     width: 100%;
@@ -383,13 +557,6 @@ a {
     justify-content: center;
     gap: 2rem;
     padding: 5rem;
-}
-.cross-titulo {
-    font-size: 7rem;
-    margin-bottom: 1.2rem;
-    padding-top: 20rem;
-    font-family: 'Semakin', sans-serif;
-    word-spacing: 1rem;
 }
 
 .cross-contenido {
@@ -419,13 +586,6 @@ a {
         padding: 2rem;
     }
 
-    .cross-titulo {
-        font-size: 6rem;
-        padding-top: 8rem;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
     .cross-contenido {
         font-size: 3rem;
         text-align: justify;
@@ -445,13 +605,6 @@ a {
         width: 100%;
         height: auto;
         padding: 2rem;
-    }
-
-    .cross-titulo {
-        font-size: 3rem;
-        padding-top: 8rem;
-        text-align: center;
-        margin-bottom: 1rem;
     }
 
     .cross-contenido {
@@ -602,7 +755,7 @@ a {
 .contenedor-titulo{
     font-size: 2rem;
     font-family: 'Poppins-Regular';
-    font-weight: 600;
+    font-weight: 768;
     color: var(--color--verde-primario);
     padding: 1rem 1rem 0 1rem;
 }
@@ -1160,7 +1313,7 @@ a {
     margin-left: 2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1030px) {
     .planes-container {
         height: auto;
     }
@@ -1182,6 +1335,7 @@ a {
     .clases-parrafo {
         display: flex;
         flex-direction: column;
+        margin: 4rem;
         text-align: center;
         font-size: 2rem;
     }

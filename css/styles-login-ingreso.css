@@ -195,8 +195,17 @@ input {
     padding-top: 3rem;
     font-size: 2rem;
     font-family: "Poppins-Regular";
-    cursor: pointer;
     text-align: center;
+}
+
+.olvido-contrasena span a{
+    color: var(--color--verde-primario);
+    font-family: "Poppins-Bold";
+}
+
+.olvido-contrasena span a:hover{
+    text-decoration: underline;
+    transition: 0.4s all;
 }
 
 .logo-ojo{
@@ -211,12 +220,9 @@ input {
     opacity: 1;
 }
 
-.olvido-contrasena:hover {
-    color: var(--color--verde-primario);
-}
 
 @media (max-width: 913px) {
-     .contenedor-medio {
+    .contenedor-medio {
         display: none;
     }
 

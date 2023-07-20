@@ -25,6 +25,8 @@ const expresionesRegulares = {
     -Para confirmar una contraseña, la expresión regular es la misma que la utilizada para validar la contraseña original..*/
 }
 
+let imput
+
 const campos = {
     nombreYApellido: false,
     correo: false,
@@ -142,7 +144,14 @@ if (botonRegistro) {
         } else {
             document.getElementById('formulario-no-enviado').classList.add('formulario-no-enviado-activo');
         }
-    
+        
+        /*************DATOS A MOSTRAR AL LOGUEARSE */
+        
+        const nombreIngresado = document.getElementById('nombre').value;
+        const apellidoIngresado = document.getElementById('apellido').value;
+        const nombre_apellido = nombreIngresado.split(' ')[0] + " " + apellidoIngresado.split(' ')[0];
+        localStorage.setItem('nombreRegistrado', nombre_apellido);
+
     });
 }
 
@@ -157,9 +166,9 @@ ingresar.addEventListener("click", (e) => {
     const claveIngresada = localStorage.getItem('claveIngreso'); // guarda lo que esta alcenado en la llave de localStorage de contraseña
 
         if (validarIngreso === usuarioIngresado && validarClave === claveIngresada) { // valida que lo que se escriba en el input correo y contraseña coincidan con lo que hay guardado en local store
-            window.location.href = 'vista-login-ingreso'; // se accede al login (evento de ventana)
+            window.location.href = '../index.html'; // se accede al login (evento de ventana)
+            localStorage.setItem('valor', 'true');
         } else {
-
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...Algo salió mal!',
