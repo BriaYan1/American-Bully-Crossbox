@@ -634,7 +634,7 @@ a {
 .parrafo_nosotros {
     color: var(--color--blanco-primario);
     font-family: "Poppins-Regular";
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
     max-width: 80%;
     margin-bottom: 3rem;
@@ -700,6 +700,10 @@ a {
 
     .contenedor-slider {
         margin-bottom: 6rem;
+    }
+
+    .parrafo_nosotros{
+        font-size: 1.5rem;
     }
 }
 
