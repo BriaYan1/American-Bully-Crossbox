@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("/assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Italic";
+    src: url("/assets/fonts/Poppins/Poppins-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("/assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-BoldItalic";
+    src: url("/assets/fonts/Poppins/Poppins-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Black";
+    src: url("/assets/fonts/Poppins/Poppins-Black.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-BlackItalic";
+    src: url("/assets/fonts/Poppins/Poppins-BlackItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Schabo-Condensed";
+    src: url("/assets/fonts/SCHABO-Condensed.otf") format("truetype");
+}
+@font-face {
+    font-family: "Semakin";
+    src: url("/assets/fonts/Semakin.otf") format("truetype");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family:sans-serif;
+}
+:root{
+    --color--verde-primario: #60ff00;
+    --color--verde-secundario: #44B200;
+    --color--verde-terciario: #8FFF4C;
+    --color--negro-primario: #000000;
+    --color--negro-secundario: #1A1A1A;
+    --color--blanco-primario: #FFFFFF;
+    --color--blanco-secundario: #E5E5E5;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--color--negro-secundario);
+}
+
+/* --------------------CONTENEDOR PRINCIPAL --------------------*/
+.contenedor-principal {
+    padding: 4rem;
+    background-image: url(/assets/home/homebackg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.volver-atras {
+    display: inline-flex;
+    align-items: center;
+}
+
+.flecha-atras {
+    width: 1.5rem;
+}
+
+.texto-atras {
+    font-family: "Poppins-Bold";
+    font-size: 1.2rem;
+    color: var(--color--verde-primario);
+    padding-left: 1rem;
+}
+
+.logo{
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto;
+}
+
+.logo-img{
+    width: 100%;
+}
+
+.titulo-perfil{
+    font-family: "Poppins-Regular";
+    font-size: 2.5rem;
+    color: var(--color--verde-primario);
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.contenedor-ejercicios{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    margin: 6rem;
+    gap: 4rem;
+}
+
+.contenedor-izquierdo, .contenedor-derecho{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.ejercicios{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    width: 27rem;
+    height: 8rem;
+    background-color: var(--color--negro-secundario);
+    border-radius: 2rem;
+    justify-items: center;
+    align-items: center;
+    transition: border 170ms linear, transform 200ms linear;
+    border: 2px solid transparent;
+}
+
+.ejercicios-img{
+    width: 5rem;
+    height: 5rem;
+    grid-column: 1;
+}
+
+.ejercicios-parrafo{
+    font-family: "Poppins-Regular";
+    font-size: 2.5rem;
+    color: var(--color--blanco-primario);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    grid-column: 2;
+}
+
+.ejercicios-flecha{
+    color: var(--color--verde-primario);
+    width: 3rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 3rem;
+    grid-column: 3;
+}
+
+.ejercicios:hover{
+    border: 2px solid var(--color--verde-primario);
+    transform: scale(1.01);
+}
+
+/*Vista Mobile*/
+
+@media screen and (max-width: 768px){
+    .logo{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .contenedor-principal{
+        height:auto;
+    }
+
+    .contenedor-ejercicios{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 4rem;
+    }
+
+    .ejercicios{
+        width: 27rem;
+    }
+
+    .ejercicios-parrafo{
+        font-size: 2rem;
+    }
+}

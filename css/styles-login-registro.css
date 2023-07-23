@@ -116,6 +116,7 @@ body {
     color: var(--color--verde-primario);
     font-family: "Poppins-Bold";
     text-align: center;
+    padding-top: 2rem;
 }
 
 .titulo-2 {
@@ -152,7 +153,7 @@ body {
 
 .labels {
     color: var(--color--verde-primario);
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-family: "Poppins-Bold";
 }
 
@@ -162,7 +163,7 @@ input {
 
 .inputs {
     border-radius: 0.5rem;
-    height: 4rem;
+    height: 3.5rem;
     width: 25rem;
     border: none;
     padding-left: 1rem;
@@ -192,7 +193,7 @@ input {
 .formulario-error{
     margin-bottom: 0;
     font-family: "Poppins-Regular";
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: red;
     display: none;
@@ -277,6 +278,7 @@ input {
 }
 
 @media (max-width: 913px) {
+    
     .contenedor-contenedores {
         display: block;
     }
@@ -292,17 +294,19 @@ input {
     .titulo-tablet {
         display: block;
         margin-top: 3rem;
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 540px) {
     
     .contenedor-principal{
-        height: 127vh;
+        height: auto;
     }
 
     .contenedor-contenedores {
         display: block;
+        height: auto;
     }
 
     .titulo-1 {
@@ -324,6 +328,7 @@ input {
     .titulo-tablet {
         display: block;
         margin-top: 3rem;
+        font-size: 2rem;
     }
 
     .grid-campos {

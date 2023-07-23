@@ -93,7 +93,7 @@ a {
     margin: 0 auto;
     list-style: none;
     align-items: center;
-    gap: 2rem; /* Agrega espacio entre elementos */
+    gap: 2rem;
 }
 
 .nav--elements ul li {
@@ -189,7 +189,6 @@ a {
     position: relative;
     display: flex;
     height: auto;
-    width: 40rem;
     align-items: center;
     justify-content: flex-end;
     margin-right: 4rem;
@@ -294,9 +293,26 @@ a {
         padding: 2rem 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
         flex-direction: column;
+        transform: translateX(27rem);
         opacity: 0;
-        visibility: hidden;
+        pointer-events: none;
         justify-content: space-between;
+        transition: opacity 250ms linear,
+                    transform 250ms linear;
+    }
+
+    .nav--elements ul li:hover {
+        transform: scale(1.02);
+    }
+
+    .nav--elements-visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0rem);
+    }
+
+    .container--ul {
+        margin-top: 4rem;
     }
 
     .container--ul ul button img{
@@ -310,17 +326,6 @@ a {
         flex-direction: column;
         gap: 3rem;
         align-items: normal;
-    }
-
-    .button--cerrar {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
-
-    .button--cerrar:hover {
-        color: var(--color--blanco-primario);
-        transition: all 0.3s;
     }
 
     .container--ul ul li img {
@@ -375,14 +380,6 @@ a {
         display: none;
     }
 
-    .button--abrir {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        padding-right: 2rem;
-    }
-
     .scale-up-center{
         animation:scale-up-center 1.5s; 
     } 
@@ -392,17 +389,74 @@ a {
         100%{transform:scale(1)} 
     }
 
-    .button--abrir:hover {
-        color: var(--color--blanco-primario);
-        transition: all 0.3s;
+    /* ~~~~~~~~~~~~~~~~~~~~~MENU HAMBURGUESA~~~~~~~~~~~~~~~~~~~~~~ */
+
+    .boton-hamburguesa-container {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        height: 6.97rem;
+        width: 4rem;
+        margin-right: 2rem;
+        right: 0;
     }
 
-    .visible {
-        opacity: 1;
-        visibility: visible;
+    .boton-hamburguesa {
+        display: flex;
+        position: absolute;
+        height: 4rem;
+        width: 4rem;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .lineas {
+        background-color: #ffffff;
+        border-radius: 0.8rem;
+        width: 85%;
+        height: 0.5rem;
+    }
+    
+    .linea1 {
+        margin-top: 0.75rem;
+        transition: all 250ms linear;
+    }
+
+    .linea2 {
+        margin-top: 0.5rem;
+        transition: all 250ms linear;
+    }
+
+    .linea3 {
+        margin-top: 0.5rem;
+        transition: all 250ms linear;
+    }
+
+    .linea1-visible {
+        position: relative;
+        margin-top: 1.76rem;
+        transform: rotate(45deg);
+        z-index: 2;
+    }
+
+    .linea2-visible {
+        width: 0;
+        opacity: 0;
+    }
+
+    .linea3-visible {
+        position: relative;
+        margin-top: -1.47rem;
+        transform: rotate(-45deg);
+        z-index: 1;
     }
 
     /* PERFIL movil */
+
+    .sesion-container {
+        display: none;
+    }
 
     .sesion-container-movil {
         display: flex;
@@ -650,6 +704,7 @@ a {
     align-items: center;
     gap: 4rem;
     max-width: 1200px;
+    transform: scale(0.92);
     padding: 0rem 4rem;
 }
 
@@ -664,6 +719,7 @@ a {
 
 .slider-imagenes {
     width: 90%;
+    border: 0.4rem solid var(--color--verde-primario);
 }
 
 .slider-imagenes img {
@@ -683,6 +739,11 @@ a {
 
     .contenedor-slider {
         padding-bottom: 5rem;
+        transform: scale(1);
+    }
+
+    .slider-derecho img, .slider-izquierdo img{
+        width: 3rem;
     }
 }
 
@@ -700,10 +761,15 @@ a {
 
     .contenedor-slider {
         margin-bottom: 6rem;
+        transform: scale(1);
     }
 
     .parrafo_nosotros{
         font-size: 1.5rem;
+    }
+
+    .slider-derecho img, .slider-izquierdo img{
+        width: 2rem;
     }
 }
 
@@ -913,7 +979,7 @@ a {
         background-position: fixed;
         width: 100%;
         height: 100%;
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
     }
 
     .cajas-coach {
@@ -1031,6 +1097,7 @@ a {
     .compe-container {
         height: auto;
         width: 100%;
+        padding-bottom: 10rem;
     }
 
     .contenedor-cajas {
@@ -1253,7 +1320,7 @@ a {
         background-position: fixed;
         width: 100%;
         height: auto;
-        padding-bottom: 10rem;
+        padding-bottom: 1rem;
     }
 
     .hr-titulo {
@@ -1408,8 +1475,9 @@ a {
 }
 
 @media screen and (max-width: 1030px) {
-    .planes-container {
+    .planes-container{
         height: auto;
+        padding-bottom: 1rem;
     }
 
     .container-planes {
@@ -1536,7 +1604,7 @@ a {
     color: var(--color--verde-primario);
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 768px) {
     .contacto-container {
         padding: 3rem;
     }

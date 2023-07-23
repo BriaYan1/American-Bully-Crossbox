@@ -1,30 +1,37 @@
-/*Menu Hamburguesa*/
-function closeMenu() {
-    const nav = document.querySelector('#nav')
-    nav.classList.remove('visible')
-    return true
-}
+/* ~~~~~~~~~~~~~~~~~~~~~ Menu Hamburguesa ~~~~~~~~~~~~~~~~~~~~~ */
 
 const nav = document.querySelector('#nav')
 const abrir = document.querySelector('#abrir')
-const cerrar = document.querySelector('#cerrar')
-
-abrir.addEventListener('click', () => {
-    nav.classList.add('visible')
-})
-
 // Agrega el evento click a cada opción del menú
 const menuItems = document.querySelectorAll('#nav ul li a')
 
+/* ~~~~~~~~~Lineas~~~~~~~~~ */
+const linea1 = document.querySelector('.linea1')
+const linea2 = document.querySelector('.linea2')
+const linea3 = document.querySelector('.linea3')
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+let menuHamburguesa = () => {
+    if (nav.classList.contains('nav--elements-visible')) { 
+        nav.classList.remove('nav--elements-visible')
+        linea1.classList.remove('linea1-visible')
+        linea2.classList.remove('linea2-visible')
+        linea3.classList.remove('linea3-visible')
+    } else {
+        nav.classList.add('nav--elements-visible')
+        linea1.classList.add('linea1-visible')
+        linea2.classList.add('linea2-visible')
+        linea3.classList.add('linea3-visible')
+    }
+}
+
 menuItems.forEach(item => {
     item.addEventListener('click', () => {
-        closeMenu()
+        menuHamburguesa()
     })
 })
 
-cerrar.addEventListener('click', () => {
-    closeMenu()
-})
+abrir.onclick = menuHamburguesa;
 
 /* ~~~~~~~~~~~~~~~~~~~~~ FUNCIONALIDAD DE CERRAR SESION Y LOGEARSE ~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -151,6 +158,8 @@ let evitar_clicks = event => {
 barra.addEventListener('click', evitar_clicks) // evita que se activa el menu que al darle click al rededor de los hijos de ese contenedor tiene abra y cierre el menu.
 panel.addEventListener('click', menu) // Activa el menu de la vista escritorio y lo cierra.
 panel_movil.addEventListener('click', menu_movil) // Activa el menu de la vista movil y lo cierra.
+
+/* PARA MOSTRAR EL NOMBRE ENEL PANEL PERFIL */
 
 var perfil_nombre_movil = document.getElementById("name-movil");
 var perfil_nombre_escritorio = document.getElementById("name-escritorio");
