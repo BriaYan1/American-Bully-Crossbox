@@ -677,7 +677,8 @@ a {
     background-size: cover;
     background-position: fixed;
     width: 100%;
-    height: 140vh; /*Hace que coincidan las lineas d los fondos, debe ir en todos los tamaños de contenedores el mismo valor*/
+    height: auto; 
+    padding-bottom: 4rem;
 }
 
 .parrafo_nosotros-contenedor {
@@ -706,6 +707,7 @@ a {
     max-width: 1200px;
     transform: scale(0.92);
     padding: 0rem 4rem;
+    justify-content: center;
 }
 
 .slider-izquierdo, .slider-derecho {
@@ -718,7 +720,7 @@ a {
 }
 
 .slider-imagenes {
-    width: 90%;
+    width: 30%;
     border: 0.4rem solid var(--color--verde-primario);
 }
 
@@ -742,6 +744,10 @@ a {
         transform: scale(1);
     }
 
+    .slider-imagenes {
+        width: 90%;
+    }
+
     .slider-derecho img, .slider-izquierdo img{
         width: 3rem;
     }
@@ -751,6 +757,10 @@ a {
 
     .carrusel_container {
         height: auto;
+    }
+
+    .slider-imagenes {
+        width: 90%;
     }
 
     .slider-imagenes img {

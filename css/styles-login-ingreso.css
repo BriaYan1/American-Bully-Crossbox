@@ -200,7 +200,7 @@ input {
 
 .olvido-contrasena span a{
     color: var(--color--verde-primario);
-    font-family: "Poppins-Bold";
+    font-family: "Poppins-Regular";
 }
 
 .olvido-contrasena span a:hover{

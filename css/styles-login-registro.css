@@ -64,7 +64,7 @@ body {
     background-image: url(/assets/login/loginbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: auto;
 }
 
 /* --------------------CONTENEDOR DE LOS 3 CONTENEDORES --------------------*/
@@ -72,7 +72,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 85vh;
+    height: auto;
 }
 
 /* --------------------CONTENEDOR DERECHO --------------------*/
@@ -98,7 +98,7 @@ body {
 .contenedor-medio {
     width: 0.3rem;
     background-color: var(--color--verde-primario);
-    height: 100%;
+    height: auto;
 }
 
 /* --------------------CONTENEDOR IZQUIERDO --------------------*/
