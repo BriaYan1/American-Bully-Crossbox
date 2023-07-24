@@ -61,7 +61,7 @@ body {
 /* --------------------CONTENEDOR PRINCIPAL --------------------*/
 .contenedor-principal {
     padding: 4rem;
-    background-image: url(/assets/home/homebackg.jpg);
+    background-image: url(/assets/competitions/competitionsbackg2.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;
@@ -126,6 +126,9 @@ body {
     align-items: center;
     transition: border 170ms linear, transform 200ms linear;
     border: 2px solid transparent;
+    -webkit-box-shadow: 10px 11px 9px -4px rgba(96,255,0,0.27);
+    -moz-box-shadow: 10px 11px 9px -4px rgba(96,255,0,0.27);
+    box-shadow: 10px 11px 9px -4px rgba(96,255,0,0.27);
 }
 
 .ejercicios-img{
@@ -183,4 +186,149 @@ body {
     .ejercicios-parrafo{
         font-size: 2rem;
     }
+}
+
+/*=====================POP UPS ===================================*/
+
+.modal-1 {
+    background-image: url(/assets/plans/plansbackg\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+  }
+
+.contenedor-equis-cerrar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.equis-cerrar {
+    font-size: 3rem;
+    color: var(--color--verde-secundario);
+    font-family: "Poppins-Bold";
+    margin: 1rem 2rem 0rem 1rem;
+    cursor: pointer;
+}
+
+.equis-cerrar:hover {
+    color: var(--color--negro-primario);
+}
+
+.contenedor-modal {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.modal-titulo {
+    font-family: 'Semakin', sans-serif;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.modal-izquierdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen-musculosTrabajados {
+    width: 90%;
+    margin: 3rem;
+}
+
+.modal-musculosTrabajados {
+    font-family: "Poppins-Bold";
+    color: var(--color--negro-primario);
+    font-size: 3rem;
+}
+
+.modal-derecho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-1 {
+    width: 40rem;
+    height: 25rem;
+    border: 0.4rem solid var(--color--negro-primario);
+}
+
+.contenedor-niveles {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+}
+
+.nivel {
+    text-align: center;
+}
+
+.tipo-nivel {
+font-family: "Poppins-Bold";
+font-size: 2rem;
+color: var(--color--verde-primario);
+background-color: var(--color--negro-primario);
+padding: 0.2rem 0.4rem;
+}
+
+.repeticiones {
+    font-family: "Poppins-Regular";
+    font-size: 2rem;
+}
+
+.asterisco {
+    color: var(--color--verde-primario);
+    font-family: "Poppins-Bold";
+}
+
+.parrafo-clases {
+    font-family: "Poppins-Regular";
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1030px) {
+    .contenedor-modal {
+        flex-direction: column;
+    }
+
+    .imagen-musculosTrabajados {
+        width: 70%;
+        margin: 3rem;
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    .modal-1 {
+        padding: 2rem;
+    }
+
+    .contenedor-modal {
+        flex-direction: column;
+    }
+
+    .contenedor-niveles {
+        flex-direction: column;
+    }
+
+    .video-1 {
+        width: 100%;
+        height: 80%;
+    }
+
 }

@@ -672,7 +672,7 @@ a {
 /*=======================| SECCION NOSOTROS |============================*/
 
 .carrusel_container {
-    background-image: url(/assets/competitions/competitionsbackg.jpg);
+    background-image: url(/assets/competitions/competitionsbackg2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -1522,7 +1522,7 @@ a {
 /*============================| SECCION DE CONTACTO |================================*/
 
 .contacto-container {
-    background-image: url(/assets/competitions/competitionsbackg.jpg);
+    background-image: url(/assets/competitions/competitionsbackg2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;

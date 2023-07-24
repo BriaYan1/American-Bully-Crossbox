@@ -27,7 +27,7 @@
                 <div class="ejercicios">
                     <img class="ejercicios-img" src="/assets/ejercicios/brupees/Recurso 8.png" alt="icon-burpees">
                     <p class="ejercicios-parrafo">Burpees</p>
-                    <a href="#"><img class="ejercicios-flecha" src="/assets/carrusel/flechas/Flecha_Derecha_Verde.png" alt="flecha-derecha"></a>
+                    <a id="abrir-modal--1" href="#modal--1"><img class="ejercicios-flecha" src="/assets/carrusel/flechas/Flecha_Derecha_Verde.png"></a>
                 </div>
                 <div class="ejercicios">
                     <img class="ejercicios-img" src="/assets/ejercicios/snatch/Recurso 7.png" alt="icon-snatch">
@@ -67,5 +67,40 @@
             </div>
         </div>
     </div>
+
+    <!-- ==================================== POP UP ===========================================-->
+
+    <dialog class="modal-1" id="modal--1">
+        <div class="contenedor-equis-cerrar">
+            <div class="equis-cerrar" id="cerrar-modal--1">X</div>
+        </div>
+        <div class="modal-titulo">BURPEES</div>
+        <div class="contenedor-modal">
+            <div class="modal-izquierdo">
+                <p class="modal-musculosTrabajados">Músculos Trabajados</p>
+                <img src="/assets/ejercicios/brupees/burpees.png" alt="" class="imagen-musculosTrabajados">
+            </div>
+            <div class="modal-derecho">
+                <iframe class="video-1" width="560" height="315" src="https://www.youtube.com/embed/auBLPXO8Fww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="contenedor-niveles">
+                    <div class="nivel">
+                        <p class="tipo-nivel">PRINCIPIANTE</p>
+                        <p class="repeticiones">10 - 15 reps</p>
+                    </div>
+                    <div class="nivel">
+                        <p class="tipo-nivel">INTERMEDIO</p>
+                        <p class="repeticiones">20 - 30 reps</p>
+                    </div>
+                    <div class="nivel">
+                        <p class="tipo-nivel">AVANZADO</p>
+                        <p class="repeticiones">40 - 50 reps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="parrafo-clases"><span class="asterisco">• </span>NUESTROS ENTRENADORES SIEMPRE ESTARÁN ATENTOS PARA BRINDARTE AYUDA.</p>
+    </dialog>
+
+<script src="/js/modales.js"></script>
 </body>
 </html>
