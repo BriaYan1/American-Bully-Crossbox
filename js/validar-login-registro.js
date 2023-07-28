@@ -25,9 +25,7 @@ const expresionesRegulares = {
     -Para confirmar una contraseña, la expresión regular es la misma que la utilizada para validar la contraseña original..*/
 }
 
-let imput
-
-const campos = {
+const campos = { /*Objeto que se usara para la validacion*/
     nombreYApellido: false,
     correo: false,
     clave: false,
@@ -37,25 +35,25 @@ const campos = {
 };
 
 const validarInput = (input) => { /*(input) es como la i en un for, es la variable de control de la funcion*/
-const campo = input.parentElement; /*obtiene el elemento padre del input actual y lo asigna a la variable campo. El padre es el div que tiene la clase campo.*/
-const error = campo.querySelector('.formulario-error');
+    const campo = input.parentElement; /*obtiene el elemento padre del input actual y lo asigna a la variable campo. El padre es el div que tiene la clase campo.*/
+    const error = campo.querySelector('.formulario-error');
 
-switch (input.name) { // seleciona el nombre del input
-    case "nombre": // selecciona el name que esta dentro del div campo
-    case "apellido": // selecciona el name que esta dentro del div campo
-        if (expresionesRegulares.nombreYApellido.test(input.value))  // como nombre y apellido "es lo mismo", la validacion para ambos es igual, value valida lo que se ingresa al input con lo que hay en la expresion regular
-        {
-            campo.classList.remove('inputs-error'); //clases de css, revisar el css, remove quita
-            error.classList.remove('formulario-error-activo'); //clases de css, revisar el css
-            campos.nombreYApellido = true;
-        } else {
-            campo.classList.add('inputs-error');
-            error.classList.add('formulario-error-activo');
-            campos.nombreYApellido = false;
-        }
-    break;
+    switch (input.name) { // seleciona el nombre del input
+        case "nombre": // selecciona el name que esta dentro del div campo
+        case "apellido": // selecciona el name que esta dentro del div campo
+            if (expresionesRegulares.nombreYApellido.test(input.value))  // como nombre y apellido "es lo mismo", la validacion para ambos es igual, value valida lo que se ingresa al input con lo que hay en la expresion regular, el metodo test se usa para comprobar si lo que se ingreso coincide con la expresion regular
+            {
+                campo.classList.remove('inputs-error'); //clases de css, revisar el css, remove quita
+                error.classList.remove('formulario-error-activo'); //clases de css, revisar el css
+                campos.nombreYApellido = true;
+            } else {
+                campo.classList.add('inputs-error');
+                error.classList.add('formulario-error-activo');
+                campos.nombreYApellido = false;
+            }
+        break;
 
-    case "correo":
+        case "correo":
         if (expresionesRegulares.correo.test(input.value)) { // test() valida que si la cadena cumple con lo que establece la expresion regular
             campo.classList.remove('inputs-error');
             error.classList.remove('formulario-error-activo');
@@ -65,24 +63,24 @@ switch (input.name) { // seleciona el nombre del input
             error.classList.add('formulario-error-activo');
             campos.correo = false;
         }
-    break;
+        break;
 
-    case "confirmar-correo":
+        case "confirmar-correo":
 
-    const validarCorreo = document.getElementById('correo'); // obtiene lo que este guardado dentro de clave
-    if (input.value === validarCorreo.value) { // valida si lo ingresado dentro de clave es igual a lo que hay en confirmar clave
-        campo.classList.remove('inputs-error');
-        error.classList.remove('formulario-error-activo');
-        campos.confirmarCorreo = true;
-    } else {
-        campo.classList.add('inputs-error');
-        error.classList.add('formulario-error-activo');
-        campos.confirmarCorreo = false;
-    }
+        const validarCorreo = document.getElementById('correo'); // obtiene lo que este guardado dentro de correo
+        if (input.value === validarCorreo.value) { // valida si lo ingresado dentro de correo es igual a lo que hay en confirmar orreo
+            campo.classList.remove('inputs-error');
+            error.classList.remove('formulario-error-activo');
+            campos.confirmarCorreo = true;
+        } else {
+            campo.classList.add('inputs-error');
+            error.classList.add('formulario-error-activo');
+            campos.confirmarCorreo = false;
+        }
 
-    break;
+        break;
 
-    case "clave":
+        case "clave":
         if (expresionesRegulares.clave.test(input.value)) {
             campo.classList.remove('inputs-error');
             error.classList.remove('formulario-error-activo');
@@ -92,9 +90,9 @@ switch (input.name) { // seleciona el nombre del input
             error.classList.add('formulario-error-activo');
             campos.clave = false;
         }
-    break;
+        break;
 
-    case "confirmar-clave":
+        case "confirmar-clave":
         const claveInput = document.getElementById('clave'); // obtiene lo que este guardado dentro de clave
         if (input.value === claveInput.value) { // valida si lo ingresado dentro de clave es igual a lo que hay en confirmar clave
             campo.classList.remove('inputs-error');
@@ -105,10 +103,10 @@ switch (input.name) { // seleciona el nombre del input
             error.classList.add('formulario-error-activo');
             campos.confirm_clave = false;
         }
-    break;
-  }
-};
-    
+        break;
+    }
+}; /*Ciere de la funcion validarInput*/
+
 inputs.forEach((input) => { // valida todos los inputs del formulario
     input.addEventListener('keyup', () => validarInput(input)); // keyip valida cuando se esta escribiendo en el input
     input.addEventListener('blur', () => validarInput(input)); // blur valida cuando se hace clic fuera del formulario al estar escribiendo y hace que de un error
@@ -125,11 +123,11 @@ if (botonRegistro) {
         if (campos.nombreYApellido && campos.correo && campos.clave && campos.confirm_clave && campos.confirmarCorreo) { //valida que todos los campos esten llenos
             Swal.fire({
                 title: 'Usuario Registrado!',
-                text: 'Haz click en el botón para continuar!',
+                text: 'Haz click para continuar!',
                 icon: 'success'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = 'login-ingreso.html' // Reemplaza con la URL de la página a la que deseas redirigir
+                    window.location.href = 'login-ingreso.html' // Redirecciona a login-ingreso
                 }
             });
             
@@ -138,8 +136,8 @@ if (botonRegistro) {
             const usuarioIngresado = document.getElementById('correo').value; // guarda el dato ingresado en el input correo
             const claveIngresada = document.getElementById('clave').value; // guarda el dato ingresado en el input clave
     
-            localStorage.setItem('usuarioIngreso', usuarioIngresado); // guardo en localStprage los datos ingresados 
-            localStorage.setItem('claveIngreso', claveIngresada); // guardo en localStorage los datos ingresados 
+            localStorage.setItem('usuarioIngreso', usuarioIngresado); // guarda en localStprage los datos ingresados 
+            localStorage.setItem('claveIngreso', claveIngresada); // guarda en localStorage los datos ingresados 
             
         } else {
             document.getElementById('formulario-no-enviado').classList.add('formulario-no-enviado-activo');
@@ -147,10 +145,10 @@ if (botonRegistro) {
         
         /*************DATOS A MOSTRAR AL LOGUEARSE */
         
-        const nombreIngresado = document.getElementById('nombre').value;
-        const apellidoIngresado = document.getElementById('apellido').value;
-        const nombre_apellido = nombreIngresado.split(' ')[0] + " " + apellidoIngresado.split(' ')[0];
-        localStorage.setItem('nombreRegistrado', nombre_apellido);
+        const nombreIngresado = document.getElementById('nombre').value; /*Guarda el nombre ingresado*/
+        const apellidoIngresado = document.getElementById('apellido').value; /*Guarda el apellido ingresado*/
+        const nombre_apellido = nombreIngresado.split(' ')[0] + " " + apellidoIngresado.split(' ')[0]; /*el metodo spitl hace que solo tome el primer nombre y apellido en caso de que se ingresen mas de dos, y a su vez los concatena*/
+        localStorage.setItem('nombreRegistrado', nombre_apellido); /*guarda el primer nmbre y el primer apellido*/
 
     });
 }
@@ -167,7 +165,7 @@ ingresar.addEventListener("click", (e) => {
 
         if (validarIngreso === usuarioIngresado && validarClave === claveIngresada) { // valida que lo que se escriba en el input correo y contraseña coincidan con lo que hay guardado en local store
             window.location.href = '../index.html'; // se accede al login (evento de ventana)
-            localStorage.setItem('valor', 'true');
+            localStorage.setItem('valor', 'true'); // valida si la sesion esta iniciada, si es asi muestra el usuario, si no, aparece normal
         } else {
             Swal.fire({
                 icon: 'error',

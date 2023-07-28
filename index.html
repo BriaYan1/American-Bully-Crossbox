@@ -55,7 +55,7 @@
               <div class="nav--rigth-2">
                 <div>
                   <a href="#contacto">
-                    <button class="btn-1">Contacto</button>
+                    <button class="btn-1" id="boton-contacto-movil">Contacto</button>
                   </a>
                 </div>
                 <div>
@@ -73,7 +73,7 @@
                   </div>
                     <h3 class="name-perfil" id="name-escritorio"></h3>
                 </div>
-                <div class="barra-deslizadora-container" id="menu">
+                <div class ="barra-deslizadora-container" id="menu">
                   <div class="barra-deslizadora">
                     <ul>
                       <li><a href="./html/perfil.html">Perfil</a></li>
@@ -125,9 +125,9 @@
         </section>
 
         <!-- =======================| SECCION QUE ES CROSSFIT |============================ -->
-        <section class="cross--main">
-          <article class="cross--container" id="crossfit">
-            <h2 class="hr-titulo" data-aos="fade-right" data-aos-duration="2000">¿Qué Es Croosfit?</h2>
+        <section class="cross--main" id="crossfit">
+          <article class="cross--container" >
+            <h2 class="cross-titulo" data-aos="fade-right" data-aos-duration="2000">¿Qué Es Croosfit?</h2>
             <p class="cross-contenido" data-aos="fade-up" data-aos-duration="2000">
               CrossFit se define como un sistema de entrenamiento de fuerza y
               acondicionamiento basado en ejercicios funcionales constantemente
@@ -148,11 +148,11 @@
 
         <!-- =======================| SECCION NOSOTROS |============================ -->
         <section class="carrusel_container" id="nosotros">
-          <div class="hr-titulo titulo-compe" data-aos="fade-right" data-aos-duration="2000">NOSOTROS</div>
+          <div class="titulo-nosotros" data-aos="fade-right" data-aos-duration="2000">NOSOTROS</div>
 
           <div class="parrafo_nosotros-contenedor">
             <p class="parrafo_nosotros" data-aos="zoom-in" data-aos-duration="2000">
-              Somos un box de CrossFit que ha estado funcionando durante dos años. Comprometidos a proporcionar a nuestros miembros un entrenamiento seguro, efectivo y divertido. Ofrecemos una variedad de clases para todos los niveles de experiencia, desde principiantes hasta avanzados. También contamos con unas excelentes instalaciones y un equipo de entrenadores calificados que están dedicados a ayudarte y así alcanzar tus objetivos. <br><br> Si estás buscando un entrenamiento desafiante y divertido, te invitamos a probar una clase de CrossFit en nuestro box. ¡Estamos seguros de que te encantará!
+              Somos un box de CrossFit que ha estado funcionando durante dos años. Comprometidos a proporcionar a nuestros miembros un entrenamiento seguro, efectivo y divertido. Ofrecemos una variedad de clases para todos los niveles de experiencia, desde principiantes hasta avanzados. También contamos con unas excelentes instalaciones y un equipo de entrenadores calificados que están dedicados a ayudarte y así alcanzar tus objetivos. <br><br> Si estás buscando un entrenamiento desafiante y divertido, te invitamos a probar una clase de CrossFit en nuestro box. <span class="parrafo_nosotros--subrayado">¡Estamos seguros de que te encantará!</span> 
               </p>
           </div>
 
@@ -175,7 +175,7 @@
 
         <!-- =======================| SECCION COACHES |============================ -->
         <section class="coa-container" id="coaches">
-          <div class="hr-titulo" data-aos="fade-right" data-aos-duration="2000">COACHES</div>
+          <div class="coa-titulo" data-aos="fade-right" data-aos-duration="2000">COACHES</div>
 
             <div class="cajas-coach">
               <div class="caja-coa" data-aos="flip-left" data-aos-duration="2000">
@@ -241,8 +241,8 @@
         </section>
 
         <!-- =======================| SECCION COMPETENCIAS |============================ -->
-        <section class="compe-container">
-          <div class="hr-titulo titulo-compe" id="competencias" data-aos="fade-right" data-aos-duration="2000">COMPETENCIAS</div>
+        <section class="compe-container" id="competencias">
+          <div class="titulo-compe" data-aos="fade-right" data-aos-duration="2000">COMPETENCIAS</div>
 
           <div class="contenedor-cajas">
 
@@ -375,9 +375,9 @@
 
         <!-- =======================| SECCION PLANES |============================ -->
 
-        <section class="planes-container">
+        <section class="planes-container" id="planes">
 
-          <div class="hr-titulo" id="planes" data-aos="fade-right" data-aos-duration="2000">MEMBRESÍAS</div>
+          <div class="planes-titulo"  data-aos="fade-right" data-aos-duration="2000">MEMBRESÍAS</div>
 
           <div class="container-planes" data-aos="zoom-in" data-aos-duration="1500">
             <div class="caja-planes" >
@@ -418,23 +418,29 @@
         <footer class="contacto-container">
           <div class="container-contacto-menu">
             <div class="contacto-izquierdo" id="contacto">
-              <p class="contacto-titulo">Contacto</p>
-              <div class="direccion">
-                <img src="/assets/footer/mapas-y-banderas.png" alt="Puntero">
-                <p class="text">Carrera 7 entre calles 2 y 3 Patiecitos, <br> municipio Guásimos, Estado Táchira.</p>
+              <div class="contacto-texto">
+                <p class="contacto-titulo">Contacto</p>
+                <div class="direccion">
+                  <img src="/assets/footer/mapas-y-banderas.png" alt="Puntero">
+                  <p class="text">Carrera 7 entre calles 2 y 3 Patiecitos <br> ( al lado de Multiservicios JD Motors), <br> municipio Guásimos, Estado Táchira.</p>
+                </div>
+                <div class="direccion">
+                  <img src="/assets/footer/llamada-telefonica.png" alt="Telefono">
+                  <p>+58 412-1605673</p>
+                </div>
+                <div class="direccion">
+                  <img src="/assets/footer/correo.png" alt="Mail">
+                  <p>francisdelgado38a@gmail.com</p>
+                </div>
+                <div class="direccion">
+                  <img src="/assets/footer/instagram.png" alt="Instagram">
+                  <a href="https://instagram.com/americanbullycrossbox?igshid=MzRlODBiNWFlZA==">@americanbullycrossbox</a>
+                </div>
               </div>
-              <div class="direccion">
-                <img src="/assets/footer/llamada-telefonica.png" alt="Telefono">
-                <p>+58 412-1605673</p>
+              <div class="container-mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d754.6727376157609!2d-72.22680113892734!3d7.829211506906061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sve!4v1690409108649!5m2!1ses!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
-              <div class="direccion">
-                <img src="/assets/footer/correo.png" alt="Mail">
-                <p>francisdelgado38a@gmail.com</p>
-              </div>
-              <div class="direccion">
-                <img src="/assets/footer/instagram.png" alt="Instagram">
-                <a href="https://instagram.com/americanbullycrossbox?igshid=MzRlODBiNWFlZA==">@americanbullycrossbox</a>
-              </div>
+              
             </div>
 
             <div class="contacto-derecho">

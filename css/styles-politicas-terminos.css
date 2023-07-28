@@ -56,7 +56,7 @@ a {
 
 body {
     background-color: var(--color--negro-secundario);
-    background-image: url(/assets/competitions/competitionsbackg2.png);
+    background-image: url(/assets/competitions/competitionsbackg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -83,12 +83,6 @@ body {
     align-items: center;
 }
 
-@media (max-width: 540px) {
-    .contenedor-principal {
-    margin: 4rem 4rem;
-} 
-}
-
 .titulo {
     color: var(--color--verde-primario);
     font-family: "Poppins-Bold";
@@ -113,4 +107,10 @@ body {
     font-family: "Poppins-Regular";
     font-size: 1.5rem;
     text-align: justify;
+}
+
+@media (max-width: 1030px) {
+    .contenedor-principal {
+    margin: 4rem 4rem;
+    } 
 }

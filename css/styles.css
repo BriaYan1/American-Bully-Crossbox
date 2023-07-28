@@ -534,7 +534,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 104.5vh; /*Hace que coincidan las lineas d los fondos, debe ir en todos los tamaños de contenedores el mismo valor*/
+    height: 100vh; 
 }
 .titulos--portada{
     display: flex;
@@ -566,8 +566,7 @@ a {
         background-position: fixed;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
-        height: 104.5vh; /*Hace que coincidan las lineas d los fondos, debe ir en todos los tamaños de contenedores el mismo valor*/
+        height: 100vh; 
     }
 
     .titulos--portada {
@@ -584,8 +583,7 @@ a {
         background-position: fixed;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
-        height: 104.5vh; /*Hace que coincidan las lineas d los fondos, debe ir en todos los tamaños de contenedores el mismo valor*/
+        height: 100vh; 
     }
 
     .titulos--portada {
@@ -600,8 +598,10 @@ a {
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
     width: 100%;
-    height: 104.5vh; /*Hace que coincidan las lineas d los fondos, debe ir en todos los tamaños de contenedores el mismo valor*/
+    height: 100vh;
 }
 
 .cross--container {
@@ -612,6 +612,13 @@ a {
     justify-content: center;
     gap: 2rem;
     padding: 5rem;
+}
+
+.cross-titulo {
+    font-family: 'Semakin', sans-serif;
+    text-align: center;
+    font-size: 8rem;
+    margin-bottom: 5rem;
 }
 
 .cross-contenido {
@@ -631,14 +638,13 @@ a {
 
 @media screen and (min-width: 768px) and (max-width: 1030px) {
     .cross--main {
-        background-image: url(/assets/crossfit/crossfitbackg.jpg);
         height: auto;
     }
 
     .cross--container {
-        width: 100%;
         height: auto;
-        padding: 2rem;
+        padding: 3rem;
+        margin-top: 10rem;
     }
 
     .cross-contenido {
@@ -652,14 +658,18 @@ a {
 
 @media screen and (max-width: 768px) {
     .cross--main {
-        background-image: url(/assets/crossfit/crossfitbackg.jpg);
         height: auto;
     }
 
+    .cross-titulo {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+
     .cross--container {
-        width: 100%;
         height: auto;
         padding: 2rem;
+        margin-top: 5rem;
     }
 
     .cross-contenido {
@@ -672,13 +682,25 @@ a {
 /*=======================| SECCION NOSOTROS |============================*/
 
 .carrusel_container {
-    background-image: url(/assets/competitions/competitionsbackg2.png);
+    background-image: url(/assets/competitions/competitionsbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: auto; 
     padding-bottom: 4rem;
+}
+
+.titulo-nosotros {
+    font-family: 'Semakin', sans-serif;
+    text-align: center;
+    font-size: 8rem;
+    margin-bottom: 3rem;
+    margin-top: 10rem;
+    color: var(--color--blanco-primario);
 }
 
 .parrafo_nosotros-contenedor {
@@ -691,8 +713,11 @@ a {
     font-family: "Poppins-Regular";
     font-size: 2rem;
     text-align: center;
-    max-width: 80%;
-    margin-bottom: 3rem;
+    margin: 3rem;
+}
+
+.parrafo_nosotros--subrayado{
+    color: var(--color--verde-primario);
 }
 
 .div_contenedor_slider {
@@ -759,6 +784,15 @@ a {
         height: auto;
     }
 
+    .titulo-nosotros {
+        font-size: 4rem;
+    }
+
+    .contenedor-slider {
+        gap: 2rem;
+        padding: 0rem;
+    }
+
     .slider-imagenes {
         width: 90%;
     }
@@ -791,13 +825,11 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 104.5vh; /*Hace que coincidan las lineas d los fondos, debe ir en todos los tamaños de contenedores el mismo valor*/
-}
-
-.hr-titulo {
-    font-family: 'Semakin', sans-serif;
-    text-align: center;
+    height: 100vh;
 }
 
 .cajas-coach {
@@ -807,6 +839,13 @@ a {
     justify-content: space-around;
     gap: 5rem;
     margin-bottom: 8rem;
+}
+
+.coa-titulo {
+    font-family: 'Semakin', sans-serif;
+    text-align: center;
+    font-size: 8rem;
+    margin-bottom: 9rem;
 }
 
 /*Caja de Coaches*/
@@ -961,12 +1000,14 @@ a {
 @media screen and (min-width: 768px) and (max-width: 1030px){
 
     .coa-container {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: fixed;
+        background-image: url(/assets/plans/plansbackg\ \(1\).jpg);
         width: 100%;
         height: auto;
-        padding-bottom: 10rem;
+        padding-bottom: 1rem;
+    }
+
+    .coa-titulo {
+        margin-top: 8rem;
     }
 
     .cajas-coach {
@@ -984,12 +1025,16 @@ a {
 @media screen and (max-width: 768px) {
 
     .coa-container {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: fixed;
+        background-image: url(/assets/plans/plansbackg\ \(1\).jpg);
         width: 100%;
-        height: 100%;
-        padding-bottom: 4rem;
+        height: auto;
+        padding-bottom: 1rem;
+    }
+
+    .coa-titulo {
+        font-size: 4rem;
+        margin-top: 8rem;
+        margin-bottom: 2rem;
     }
 
     .cajas-coach {
@@ -999,6 +1044,7 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        transform: scale(0.87);
     }
 }
 
@@ -1009,12 +1055,19 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 104.5vh; /*Hace que coincidan las lineas d los fondos, debe ir en todos los tamaños de contenedores el mismo valor*/
+    height: 100vh; 
 }
 
 .titulo-compe {
     color: var(--color--blanco-primario);
+    font-family: 'Semakin', sans-serif;
+    text-align: center;
+    font-size: 8rem;
+    margin-bottom: 9rem;
 }
 
 .contenedor-cajas {
@@ -1107,13 +1160,16 @@ a {
     .compe-container {
         height: auto;
         width: 100%;
-        padding-bottom: 10rem;
     }
 
     .contenedor-cajas {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .titulo-compe {
+        margin-top: 5rem;
     }
 
     .caja-competencia {
@@ -1130,25 +1186,34 @@ a {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .titulo-compe {
+        font-size: 4rem;
+        margin-top: 5rem;
+    }
+}
+
 
 
 /*============================| SECCION DE HORARIOS |================================*/
 
 .hr-container {
-    background-image: url(/assets/schedules/schedulesbackg.jpg);
+    background-image: url(/assets/crossfit/crossfitbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 104.5vh;
+    height: 100vh;
 }
 
 .hr-titulo {
     font-family: 'Semakin', sans-serif;
     text-align: center;
     font-size: 8rem;
-    padding-top: 10rem;
-    margin-bottom: 5rem;
+    margin-bottom: 9rem;
 }
 
 .hr-lista {
@@ -1156,12 +1221,12 @@ a {
     grid-template-columns: auto auto auto auto;
     display: flex;
     justify-content: center;
-    gap: 5rem;
-    margin-bottom: 8rem;
+    gap: 8rem;
 }
 
 .hr-lista-1{
     display: flex;
+    gap: 6rem;
 }
 
 .caja {
@@ -1228,6 +1293,7 @@ a {
 
 .hr-lista-2{
     display: flex;
+    gap: 6rem;
 }
 
 .dias-2 {
@@ -1286,25 +1352,12 @@ a {
 @media screen and (min-width: 768px) and (max-width: 1030px) {
     .hr-container {
         background-image: url(/assets/schedules/schedulesbackg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: fixed;
         width: 100%;
         height: auto;
-        padding-bottom: 10rem;
-    }
-
-    .hr-titulo {
-        font-family: 'Semakin', sans-serif;
-        text-align: center;
-        font-size: 4rem;
-        padding-top: 10rem;
-        margin-bottom: 6rem;
+        padding-bottom: 3rem;
     }
 
     .hr-lista {
-        display: grid;
-        grid-template-columns: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1324,26 +1377,16 @@ a {
 
 @media screen and (max-width: 768px) {
     .hr-container {
-        background-image: url(/assets/schedules/schedulesbackg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: fixed;
-        width: 100%;
         height: auto;
-        padding-bottom: 1rem;
+        padding-bottom: 3rem;
     }
 
     .hr-titulo {
-        font-family: 'Semakin', sans-serif;
-        text-align: center;
         font-size: 4rem;
-        padding-top: 10rem;
-        margin-bottom: 4rem;
+        margin-top: 5rem;
     }
 
     .hr-lista {
-        display: grid;
-        grid-template-columns: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1365,20 +1408,30 @@ a {
     }
 }
 
-/*============================| SECCION DE PLANES |================================*/
+/*============================| SECCION DE MEMBRESIAS |================================*/
 
 .planes-container {
     background-image: url(/assets/plans/plansbackg\ \(1\).jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 104.5vh;
+    height: 100vh;
 }
 
 .container-planes {
     display: flex;
     justify-content: space-evenly;
+}
+
+.planes-titulo {
+    font-family: 'Semakin', sans-serif;
+    text-align: center;
+    font-size: 8rem;
+    margin-bottom: 9rem;
 }
 
 .caja-planes {
@@ -1472,7 +1525,7 @@ a {
 }
 
 .asterisco {
-    color: var(--color--verde-primario);
+    color: var(--color--verde-secundario);
     font-family: "Poppins-Bold";
 }
 
@@ -1496,6 +1549,10 @@ a {
         align-items: center;
     }
 
+    .planes-titulo {
+        margin-top: 5rem;
+    }
+
     .caja-planes {
         margin-top: 4rem;
     }
@@ -1515,14 +1572,20 @@ a {
     .parrafo-clases:nth-child(2) {
         margin-left: 0rem;
         margin-top: 3rem;
-        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .planes-titulo {
+        font-size: 4rem;
+        margin-top: 5rem;
     }
 }
 
 /*============================| SECCION DE CONTACTO |================================*/
 
 .contacto-container {
-    background-image: url(/assets/competitions/competitionsbackg2.png);
+    background-image: url(/assets/competitions/competitionsbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -1536,6 +1599,17 @@ a {
     justify-content:space-evenly;
     gap: 2rem;
     padding-top: 2rem;
+}
+
+.contacto-izquierdo{
+    display: flex;
+    gap: 2rem;
+}
+
+.contacto-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .contacto-titulo {
@@ -1560,6 +1634,11 @@ a {
 
 .direccion img {
     margin-right: 1rem;
+}
+
+.container-mapa iframe{
+    width: 28rem;
+    height: 25rem;
 }
 
 .contacto-derecho {
@@ -1619,8 +1698,13 @@ a {
         padding: 3rem;
     }
 
+    .contacto-izquierdo{
+        flex-direction: column;
+    }
+
     .container-contacto-menu {
         flex-direction: column;
         padding: 3rem;
+        align-items: center;
     }
 }

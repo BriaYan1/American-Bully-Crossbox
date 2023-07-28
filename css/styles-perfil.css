@@ -61,7 +61,7 @@ body {
 /* --------------------CONTENEDOR PRINCIPAL --------------------*/
 .contenedor-principal {
     padding: 4rem;
-    background-image: url(/assets/competitions/competitionsbackg2.png);
+    background-image: url(/assets/competitions/competitionsbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;
@@ -107,6 +107,8 @@ body {
     justify-content: center;
     margin: 6rem 6rem 0rem 6rem;
     gap: 4rem;
+    padding-bottom: 3rem;
+    height: auto;
 }
 
 .contenedor-izquierdo, .contenedor-derecho{
@@ -171,6 +173,8 @@ body {
 
     .contenedor-principal{
         height:auto;
+        padding: 2rem;
+        padding-bottom: 6rem;
     }
 
     .contenedor-ejercicios{
@@ -190,20 +194,19 @@ body {
 
 /*=====================POP UPS ===================================*/
 
-.modal-1 {
+.modal {
     background-image: url(/assets/plans/plansbackg\ \(1\).jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
-    width: 100%;
-    height: auto;
     position: fixed;
     top: 50%;
     left: 50%;
     width: 80%;
     height: 80%;
     transform: translate(-50%, -50%);
-  }
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
+}
 
 .contenedor-equis-cerrar {
     display: flex;
@@ -259,7 +262,7 @@ body {
     flex-direction: column;
 }
 
-.video-1 {
+.gif {
     width: 40rem;
     height: 25rem;
     border: 0.4rem solid var(--color--negro-primario);
@@ -277,11 +280,11 @@ body {
 }
 
 .tipo-nivel {
-font-family: "Poppins-Bold";
-font-size: 2rem;
-color: var(--color--verde-primario);
-background-color: var(--color--negro-primario);
-padding: 0.2rem 0.4rem;
+    font-family: "Poppins-Bold";
+    font-size: 2rem;
+    color: var(--color--verde-primario);
+    background-color: var(--color--negro-primario);
+    padding: 0.2rem 0.4rem;
 }
 
 .repeticiones {
@@ -290,7 +293,7 @@ padding: 0.2rem 0.4rem;
 }
 
 .asterisco {
-    color: var(--color--verde-primario);
+    color: var(--color--verde-secundario);
     font-family: "Poppins-Bold";
 }
 
@@ -322,12 +325,21 @@ padding: 0.2rem 0.4rem;
         flex-direction: column;
     }
 
+    .equis-cerrar {
+        margin: 0rem 1rem 0rem 1rem;
+        cursor: pointer;
+    }
+
+    .modal-musculosTrabajados{
+        text-align: center;
+    }
+
     .contenedor-niveles {
         flex-direction: column;
     }
 
-    .video-1 {
-        width: 100%;
+    .gif {
+        width: 90%;
         height: 80%;
     }
 

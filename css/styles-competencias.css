@@ -75,7 +75,7 @@ html{
 
 .descripcion p {
     color: var(--color--blanco-primario);
-    max-width: 80rem;
+    margin: 3rem;
     font-size: 1.8rem;
     margin-top: 1rem;
     margin-bottom: 3rem;
@@ -120,8 +120,19 @@ html{
     text-align: center;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1030px) {
-    .imagenes{
-        grid-template-columns: 1fr 1fr;
+@media screen and (max-width: 1030px) {
+    .contenedor-principal{
+        padding: 3rem;
     }
+
+    .titulo-logo p {
+    font-size: 3.5rem;
+    }
+
+    .imagenes {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
 }

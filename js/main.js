@@ -1,9 +1,9 @@
-/* ~~~~~~~~~~~~~~~~~~~~~ Menu Hamburguesa ~~~~~~~~~~~~~~~~~~~~~ */
+//* ~~~~~~~~~~~~~~~~~~~~~ Menu Hamburguesa ~~~~~~~~~~~~~~~~~~~~~ */
 
-const nav = document.querySelector('#nav')
-const abrir = document.querySelector('#abrir')
-// Agrega el evento click a cada opción del menú
-const menuItems = document.querySelectorAll('#nav ul li a')
+const nav = document.querySelector('#nav') /*Selecciona el id nav*/
+const abrir = document.querySelector('#abrir') /*Selecciona el id abrir*/
+const menuItems = document.querySelectorAll('#nav ul li a') /*seleciona el id nav y las etiquetas dentro del contenedor*/
+const botonContacto = document.querySelector('#boton-contacto-movil') /*selecciona el boton de contacto movil*/
 
 /* ~~~~~~~~~Lineas~~~~~~~~~ */
 const linea1 = document.querySelector('.linea1')
@@ -32,6 +32,7 @@ menuItems.forEach(item => {
 })
 
 abrir.onclick = menuHamburguesa;
+botonContacto.onclick = menuHamburguesa;
 
 /* ~~~~~~~~~~~~~~~~~~~~~ FUNCIONALIDAD DE CERRAR SESION Y LOGEARSE ~~~~~~~~~~~~~~~~~~~~~ */
 
