@@ -1,15 +1,15 @@
 /*<!-- ==================================== POP UP BURPESS ===========================================--> */
 
-const modal1 = document.getElementById('modal--1');
-const abrirModal1 = document.querySelector('#abrir-modal--1');
-const cerrarModal1 = document.getElementById('cerrar-modal--1');
+const modal1 = document.getElementById('modal--1'); //Selecciona el ID modal--1 que esta en la etiqueta dialog.
+const abrirModal1 = document.querySelector('#abrir-modal--1'); //Selecciona el ID abrir-modal--1 que esta en la etiqueta a, en el div ejercicios.
+const cerrarModal1 = document.getElementById('cerrar-modal--1'); //Selecciona el ID cerrar-mopdal--1 que esta dentro del contenedor-equis--cerrar
 
 abrirModal1.addEventListener("click", ()=>{
-    modal1.showModal();
+    modal1.showModal(); //Propiedad que trae el modal, activa el modal o PopUp (Muestra el modal)
 })
 
 cerrarModal1.addEventListener("click", ()=>{
-    modal1.close();
+    modal1.close(); //Propiedad que trae el modal, cierra el modal o PopUp (Oculta el modal)
 })
 
 /*<!-- ==================================== POP UP SNATCH ===========================================--> */

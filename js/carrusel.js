@@ -1,4 +1,4 @@
-let imagenes = [ /*Arreglo que contiene las imagenes */
+let imagenes = [ /* Arreglo que contiene las imagenes en la carpeta assets en seccion de carrusel */
     "assets/carrusel/imagenes/1.jpg",
     "assets/carrusel/imagenes/2.jpg",
     "assets/carrusel/imagenes/3.jpg",
@@ -18,7 +18,7 @@ document.Imagen.src = imagenes[0]; /*Muestra la primera imagen en el carrusel*/
 let sliderDerecho = document.querySelector(".slider-derecho"); /*selecciona la flecha derecha del carrusel*/
 let sliderIzquierdo = document.querySelector(".slider-izquierdo");/*selecciona la flecha izquierda del carrusel*/
 let cont = 0; /*contador con el que se moveran las imagenes*/
-let intervalo = setInterval(MoverDerecha, 4000);
+let intervalo = setInterval(MoverDerecha, 4000); /* setInterval es un metodo directo de JavaScript, llama a la funcion MoverDerecha y ejecuta el codigo cada 4s de forma automatica */
 
 function MoverDerecha() { /*funcion para mover a la derecha automatico, esta funcion se llama por defecto al cargar la pagina*/
     cont++;  /*incremento del contador ( muestra la imagen siguiente )*/
@@ -37,7 +37,7 @@ function MoverIzquierda() { /*funcion para mover a la izquierda*/
 }
 
 sliderDerecho.addEventListener("click", function() { /*al hacer click muestra la imagen de la derecha, ignorando el intervalo*/
-    clearInterval(intervalo); /*hace que el intervalo se resete y empiece en cero*/
+    clearInterval(intervalo); /*hace que el intervalo se resetee y empiece en cero*/
     MoverDerecha(); /*ejecucion de la funcion*/
     intervalo = setInterval(MoverDerecha, 4000); /*despues de hacer click y que muestre la siguiente imagen, se establece de nuevo el tiempo que va a durar el intervalo*/
 });

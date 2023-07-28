@@ -11,28 +11,28 @@ const linea2 = document.querySelector('.linea2')
 const linea3 = document.querySelector('.linea3')
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-let menuHamburguesa = () => {
-    if (nav.classList.contains('nav--elements-visible')) { 
+let menuHamburguesa = () => { /* La variable menuHamburguesa almacena una funcion tipo flecha que luego sera llamada por el nombre de la variable en otra parte del codigo. */
+    if (nav.classList.contains('nav--elements-visible')) { /* Se valida si el HTML contiene la clase nav-elements-visible, si es asi se ejecuta la condicion */
         nav.classList.remove('nav--elements-visible')
         linea1.classList.remove('linea1-visible')
         linea2.classList.remove('linea2-visible')
         linea3.classList.remove('linea3-visible')
     } else {
-        nav.classList.add('nav--elements-visible')
+        nav.classList.add('nav--elements-visible') /* Agrega la clase en el HTML, ver el CSS donde esta el estilo predeterminado */
         linea1.classList.add('linea1-visible')
         linea2.classList.add('linea2-visible')
         linea3.classList.add('linea3-visible')
     }
 }
 
+abrir.onclick = menuHamburguesa; // Al hacer click en el icono del menu hamburguesa se va a ejecutar la funcion menuHamburguesa
+botonContacto.onclick = menuHamburguesa;
+
 menuItems.forEach(item => {
     item.addEventListener('click', () => {
         menuHamburguesa()
     })
-})
-
-abrir.onclick = menuHamburguesa;
-botonContacto.onclick = menuHamburguesa;
+}) /* Para cada elemento que esta dentro del nav al hacer click se ejecuta la funcion del menuHamburguesa */
 
 /* ~~~~~~~~~~~~~~~~~~~~~ FUNCIONALIDAD DE CERRAR SESION Y LOGEARSE ~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let boton_cerrarsesion_movil = document.getElementById('cerrar-sesion-movil') // Selecciona el ID 'cerrar-sesion-movil' que se ubica en la linea 49 de index.html.
 
 /*  window.matchMedia permite saber si una condición de tamaño de pantalla se cumple o no.
-    enel codigo se usa Para verificar si los elementos de que estan entre 0px a 1030px de ancho se 
+    en el codigo se usa Para verificar si los elementos de que estan entre 0px a 1030px de ancho se 
     agregen los estilos y contenedores que se deben que monstrar en la vista movil. y despues si
     la vista se pasa de 1030px de ancho . se agregan los estilos y contenedores que se deben que
     monstrar en la vista escritorio. */
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('valor', 'false') // Guarda en Localstorage el valor false, para cuando se recarge la pagina otra funcion compruebe de que se esta logeando.
                 location.reload() // esta Funcion Recarga la pagina cuando le damos cerrar sesion para evitar bugs visuales.
             }
-        } // Aca cierra la funcion de cerrar_abrir_movil.
+        }
 
         const cerrar_abrir = () => {
             // Aca Comprueba de que si La sesion Esta Abierta. si esta abierta se Active el Contenedor de Login de vista escritorio y se guarda el valor en localstorage.
@@ -88,11 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('valor', 'false') // Guarda en Localstorage el valor false, para cuando se recarge la pagina otra funcion compruebe de que se esta logeando.
                 location.reload() // esta Funcion Recarga la pagina cuando le damos cerrar sesion para evitar bugs visuales.
             }
-        }// Aca cierra la funcion de cerrar_abrir.
+        }
 
         /* El método .matches comprueba si los parámetros proporcionados (en este caso, la función de mediaQuery)
         cumplen con los requisitos especificados. Si los requisitos se cumplen, el método devuelve true. 
         como lo que esta haciendo aca. de que si la vista esta menos que 1030px se activen los contenedores de vista movil.*/
+
         if (event.matches) {
             if (localStorage.getItem('valor') === 'true') { // Este Comprueba el valor guardado en localstorage es true y Esto permite activar los estilos de los contenedores para la vista móvil.
                 sesion_login.style.display = 'none' // Activa el Display: none; al Contenedor de los Botones de login de vista escritorio. para que no aparezca enel contenedor de login movil.
@@ -106,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sesion_perfil_movil.style.display = 'none' // Activa el Display: none; al Contenedor perfil de vista movil.
             }
             boton_cerrarsesion_movil.onclick = cerrar_abrir_movil // CUando se le da click al Boton de cerrar sesion enel menu hamburguesa. se activa la funcion cerrar_abrir_movil.
-        } else { // Este Comprueba de que si la vvista esta por mas de 1030px. y activa los contenedores de vista escritorio.
+        } else { // Este Comprueba de que si la vista esta por mas de 1030px. y activa los contenedores de vista escritorio.
             if (localStorage.getItem('valor') === 'true') {// Este Comprueba el valor guardado en localstorage es true y Esto permite activar los estilos de los contenedores para la vista móvil.
                 sesion_login.style.display = 'none' // Activa el Display: none; al Contenedor de los Botones de login de vista escritorio.
                 sesion_perfil.style.display = 'flex' // Activa el Display: flex; al contenedor del perfil de vista escritorio.
@@ -122,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    mediaQuery.onchange = media_movil // El evento .onchange  se activa cuando el contenido cambia. pal cual lo usamos ala funcion de mediaQuery. que si se cambia la vista a movil o escritorio.
+    mediaQuery.onchange = media_movil // El evento .onchange  se activa cuando el contenido cambia. el cual lo usamos en funcion de mediaQuery. que si se cambia la vista a movil o escritorio.
 
     media_movil(mediaQuery) // Ingresa el Parametro de MediaQuery. para verificar los Condicionales de los cuales comprueban de si es vista movil o vista escritorio.
 })
@@ -151,12 +152,6 @@ let menu_movil = () => { // Funcion que Crear y Elimina el Contenedor de la barr
     }
 }
 
-// Esta Funcion Evita que los evento click que esta insertado enel contenedor de perfil de vista escritorio. se abra o cierre el contenedor que esta en display: none; 
-let evitar_clicks = event => {
-    event.stopPropagation()
-}
-
-barra.addEventListener('click', evitar_clicks) // evita que se activa el menu que al darle click al rededor de los hijos de ese contenedor tiene abra y cierre el menu.
 panel.addEventListener('click', menu) // Activa el menu de la vista escritorio y lo cierra.
 panel_movil.addEventListener('click', menu_movil) // Activa el menu de la vista movil y lo cierra.
 

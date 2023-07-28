@@ -160,7 +160,7 @@ if (ingresar) {
 ingresar.addEventListener("click", (e) => {
     const validarIngreso = document.getElementById('correo-ingreso').value; // obtiene el id del input correo
     const validarClave = document.getElementById('clave-ingreso').value; // obtiene el id del input contraseña
-    const usuarioIngresado = localStorage.getItem('usuarioIngreso'); // guarda lo que esta alcenado en la llave de localStorage de correo
+    const usuarioIngresado = localStorage.getItem('usuarioIngreso'); // guarda lo que esta almacenado en la llave de localStorage de correo
     const claveIngresada = localStorage.getItem('claveIngreso'); // guarda lo que esta alcenado en la llave de localStorage de contraseña
 
         if (validarIngreso === usuarioIngresado && validarClave === claveIngresada) { // valida que lo que se escriba en el input correo y contraseña coincidan con lo que hay guardado en local store
@@ -207,6 +207,3 @@ ojo_clave.addEventListener( "click", function() {
         ojo_clave.style.opacity = 0.6;
     }
 });
-
-
-
