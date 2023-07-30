@@ -60,6 +60,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* --------------------CONTENEDOR DE LOS 3 CONTENEDORES --------------------*/
@@ -68,6 +71,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     height: auto;
+    gap: 10rem;
 }
 
 /* --------------------CONTENEDOR DERECHO --------------------*/
@@ -76,7 +80,6 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1rem;
 }
 
 .logo-box {
@@ -103,7 +106,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1rem;
 }
 
 .titulo-1 {
