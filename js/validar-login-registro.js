@@ -105,6 +105,10 @@ const validarInput = (input) => { /*(input) es como la i en un for, es la variab
         }
         break;
     }
+
+    if (campos.nombreYApellido && campos.correo && campos.confirmarCorreo && campos.clave && campos.confirm_clave ){
+        document.getElementById('formulario-no-enviado').classList.remove('formulario-no-enviado-activo');
+    }
 }; /*Ciere de la funcion validarInput*/
 
 inputs.forEach((input) => { // valida todos los inputs del formulario
