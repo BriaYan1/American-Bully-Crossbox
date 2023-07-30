@@ -214,7 +214,7 @@ body {
 }
 
 .equis-cerrar {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--color--verde-secundario);
     font-family: "Poppins-Bold";
     margin: 1rem 2rem 0rem 1rem;
@@ -234,8 +234,8 @@ body {
 .modal-titulo {
     font-family: 'Semakin', sans-serif;
     text-align: center;
-    font-size: 4rem;
-    margin-bottom: 2rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
 }
 
 .modal-izquierdo {
@@ -246,13 +246,13 @@ body {
 
 .imagen-musculosTrabajados {
     width: 90%;
-    margin: 3rem;
+    margin: 7rem;
 }
 
 .modal-musculosTrabajados {
     font-family: "Poppins-Bold";
     color: var(--color--negro-primario);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .modal-derecho {
@@ -262,17 +262,23 @@ body {
     flex-direction: column;
 }
 
-.gif {
-    width: 40rem;
-    height: 25rem;
+.contenedor-video{
+    width: 30rem;
+    height: 40rem;
     border: 0.4rem solid var(--color--negro-primario);
+}
+
+video {
+    width: 100%;
+    height: 39.2rem;
+    object-fit: cover;
 }
 
 .contenedor-niveles {
     display: flex;
     gap: 2rem;
     justify-content: space-evenly;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 .nivel {
@@ -281,7 +287,7 @@ body {
 
 .tipo-nivel {
     font-family: "Poppins-Bold";
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color--verde-primario);
     background-color: var(--color--negro-primario);
     padding: 0.2rem 0.4rem;
@@ -289,7 +295,7 @@ body {
 
 .repeticiones {
     font-family: "Poppins-Regular";
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .asterisco {
