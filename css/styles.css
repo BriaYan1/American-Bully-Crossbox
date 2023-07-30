@@ -1636,8 +1636,9 @@ a {
 }
 
 .container-mapa iframe{
+    margin-top: 1rem;
     width: 28rem;
-    height: 25rem;
+    height: 24rem;
 }
 
 .contacto-derecho {
