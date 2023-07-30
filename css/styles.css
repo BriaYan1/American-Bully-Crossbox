@@ -594,7 +594,7 @@ a {
 
 /*=======================| SECCION QUE ES CROSSFIT |============================*/
 .cross--main {
-    background-image: url(/assets/crossfit/crossfitbackg.jpg);
+    background-image: url(/assets/schedules/schedulesbackg\(sinlinea\).jpg);
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1198,7 +1198,7 @@ a {
 /*============================| SECCION DE HORARIOS |================================*/
 
 .hr-container {
-    background-image: url(/assets/crossfit/crossfitbackg.jpg);
+    background-image: url(/assets/schedules/schedulesbackg\(sinlinea\).jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -1351,7 +1351,6 @@ a {
 
 @media screen and (min-width: 768px) and (max-width: 1030px) {
     .hr-container {
-        background-image: url(/assets/schedules/schedulesbackg.jpg);
         width: 100%;
         height: auto;
         padding-bottom: 3rem;
