@@ -55,16 +55,11 @@ a {
 }
 
 body {
-    background-color: var(--color--negro-secundario);
-}
-
-/* --------------------CONTENEDOR PRINCIPAL --------------------*/
-.contenedor-principal {
     padding: 4rem;
     background-image: url(/assets/login/loginbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* --------------------CONTENEDOR DE LOS 3 CONTENEDORES --------------------*/
@@ -211,13 +206,14 @@ input {
 .logo-ojo{
     width: 3rem;
     position: absolute;
-    top: 3.7rem;
+    top: 3.4rem;
     left: calc(86px + 50%);
     opacity: 0.6;
 }
 
 .logo-ojo:hover{
     opacity: 1;
+    transition: all 0.4s;
 }
 
 

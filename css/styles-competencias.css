@@ -31,6 +31,14 @@ html{
     font-size: 62.5%;
     font-family:sans-serif;
 }
+body{
+    background-image: url(/assets/competitions/competitionsbackg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    padding: 3rem 8rem;
+    height: auto;
+}
 :root{
     --color--verde-primario: #60ff00;
     --color--verde-secundario: #44B200;
@@ -39,14 +47,6 @@ html{
     --color--negro-secundario: #1A1A1A;
     --color--blanco-primario: #FFFFFF;
     --color--blanco-secundario: #E5E5E5;
-}
-
-.contenedor-principal {
-    background-image: url(/assets/competitions/competitionsbackg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: fixed;
-    padding: 3rem 8rem;
 }
 
 .titulo-logo {

@@ -55,17 +55,13 @@ a {
 }
 
 body {
-    background-color: var(--color--negro-secundario);
-}
-
-/* --------------------CONTENEDOR PRINCIPAL --------------------*/
-.contenedor-principal {
     padding: 4rem;
     background-image: url(/assets/competitions/competitionsbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
+    min-height: 100vh;
 }
+
 
 .volver-atras {
     display: inline-flex;

@@ -55,16 +55,11 @@ a {
 }
 
 body {
-    background-color: var(--color--negro-secundario);
-}
-
-/* --------------------CONTENEDOR PRINCIPAL --------------------*/
-.contenedor-principal {
     padding: 4rem;
     background-image: url(/assets/login/loginbackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .volver-atras {
