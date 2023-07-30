@@ -26,7 +26,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    user-select: none;
 }
 html{
     font-size: 62.5%;
@@ -222,7 +221,6 @@ a {
     font-size: 1.3rem;
     text-align: center;
     color: var(--color--verde-primario);
-    user-select: none;
 }
 
 .barra-deslizadora-container {
