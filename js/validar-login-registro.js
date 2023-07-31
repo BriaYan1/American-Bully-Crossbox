@@ -69,9 +69,15 @@ const validarInput = (input) => { /*(input) es como la i en un for, es la variab
 
         const validarCorreo = document.getElementById('correo'); // obtiene lo que este guardado dentro de correo
         if (input.value === validarCorreo.value) { // valida si lo ingresado dentro de correo es igual a lo que hay en confirmar orreo
-            campo.classList.remove('inputs-error');
-            error.classList.remove('formulario-error-activo');
-            campos.confirmarCorreo = true;
+            if (input.value === ""){
+                campo.classList.add('inputs-error');
+                error.classList.add('formulario-error-activo');
+                campos.confirmarCorreo = false;
+            } else {
+                campo.classList.remove('inputs-error');
+                error.classList.remove('formulario-error-activo');
+                campos.confirmarCorreo = true;
+            }
         } else {
             campo.classList.add('inputs-error');
             error.classList.add('formulario-error-activo');
@@ -95,15 +101,25 @@ const validarInput = (input) => { /*(input) es como la i en un for, es la variab
         case "confirmar-clave":
         const claveInput = document.getElementById('clave'); // obtiene lo que este guardado dentro de clave
         if (input.value === claveInput.value) { // valida si lo ingresado dentro de clave es igual a lo que hay en confirmar clave
-            campo.classList.remove('inputs-error');
-            error.classList.remove('formulario-error-activo');
-            campos.confirm_clave = true;
+            if (input.value === ""){
+                campo.classList.add('inputs-error');
+                error.classList.add('formulario-error-activo');
+                campos.confirm_clave = false;
+            } else {
+                campo.classList.remove('inputs-error');
+                error.classList.remove('formulario-error-activo');
+                campos.confirm_clave = true;
+            }
         } else {
             campo.classList.add('inputs-error');
             error.classList.add('formulario-error-activo');
             campos.confirm_clave = false;
         }
         break;
+    }
+
+    if (campos.nombreYApellido && campos.correo && campos.confirmarCorreo && campos.clave && campos.confirm_clave ){
+        document.getElementById('formulario-no-enviado').classList.remove('formulario-no-enviado-activo');
     }
 }; /*Ciere de la funcion validarInput*/
 
@@ -165,7 +181,7 @@ ingresar.addEventListener("click", (e) => {
 
         if (validarIngreso === usuarioIngresado && validarClave === claveIngresada) { // valida que lo que se escriba en el input correo y contraseña coincidan con lo que hay guardado en local store
             window.location.href = '../index.html'; // se accede al login (evento de ventana)
-            localStorage.setItem('valor', 'true'); // valida si la sesion esta iniciada, si es asi muestra el usuario, si no, aparece normal
+            localStorage.setItem('sesion', 'true'); // valida si la sesion esta iniciada, si es asi muestra el usuario, si no, aparece normal
         } else {
             Swal.fire({
                 icon: 'error',

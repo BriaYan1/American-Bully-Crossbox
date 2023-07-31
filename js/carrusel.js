@@ -11,7 +11,9 @@ let imagenes = [ /* Arreglo que contiene las imagenes en la carpeta assets en se
     "assets/carrusel/imagenes/10.jpg",
     "assets/carrusel/imagenes/11.jpg",
     "assets/carrusel/imagenes/12.jpg",
-    "assets/carrusel/imagenes/13.jpg"
+    "assets/carrusel/imagenes/13.jpg",
+    "assets/carrusel/imagenes/14.jpg",
+    "assets/carrusel/imagenes/15.jpg"
 ];
 
 document.Imagen.src = imagenes[0]; /*Muestra la primera imagen en el carrusel*/
