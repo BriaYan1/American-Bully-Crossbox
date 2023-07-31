@@ -181,7 +181,7 @@ ingresar.addEventListener("click", (e) => {
 
         if (validarIngreso === usuarioIngresado && validarClave === claveIngresada) { // valida que lo que se escriba en el input correo y contraseña coincidan con lo que hay guardado en local store
             window.location.href = '../index.html'; // se accede al login (evento de ventana)
-            localStorage.setItem('valor', 'true'); // valida si la sesion esta iniciada, si es asi muestra el usuario, si no, aparece normal
+            localStorage.setItem('sesion', 'true'); // valida si la sesion esta iniciada, si es asi muestra el usuario, si no, aparece normal
         } else {
             Swal.fire({
                 icon: 'error',
