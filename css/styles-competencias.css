@@ -36,7 +36,6 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
-    padding: 3rem 8rem;
     min-height: 100vh;
 }
 :root{
@@ -47,6 +46,10 @@ body{
     --color--negro-secundario: #1A1A1A;
     --color--blanco-primario: #FFFFFF;
     --color--blanco-secundario: #E5E5E5;
+}
+
+.contenedor-principal{
+    padding: 3rem 8rem;
 }
 
 .titulo-logo {
